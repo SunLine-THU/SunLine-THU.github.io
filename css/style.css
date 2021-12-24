@@ -1,0 +1,346 @@
+:root {
+  --background-color: #101B2A;
+  --tree-color: #1B885E;
+  --yellow: #FFFC5E;
+}
+
+body{
+  background: var(--background-color);
+}
+#audios{
+  display: block;
+}
+
+.text{
+  color: wheat;
+  position: absolute;
+  width: 600px;
+  height: 50px;
+  left: 50%;
+  top: 5%;
+  margin-left: -300px;
+  z-index: 99;
+  font-family: 华文彩云;
+  font-size: 70px;
+  line-height:120px;
+  text-align: center;
+}
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 70vmin;
+  margin-bottom: 10vmin;
+  width: 80vmin;
+  height: 80vmin;
+  z-index: 90;
+}
+
+
+/* Bottom tree piece */
+.tree {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20vmin;
+  width: 0;
+  height: 0;
+  border-bottom: 32vmin solid var(--tree-color);
+  border-right: 32vmin solid transparent;
+  border-left: 32vmin solid transparent;
+}
+
+/* Tree middle */
+.tree::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -16vmin;
+  width: 0;
+  height: 0;
+  border-bottom: 27vmin solid var(--tree-color);
+  border-right: 27vmin solid transparent;
+  border-left: 27vmin solid transparent;
+}
+
+/* Tree top */
+.tree::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0vmin;
+  width: 0;
+  height: 0;
+  border-bottom: 19vmin solid var(--tree-color);
+  border-right: 19vmin solid transparent;
+  border-left: 19vmin solid transparent;
+}
+
+/* Snow back of trunk */
+.trunk {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: white;
+  width: 50vmin;
+  height: 10vmin;
+  border-radius: 58% 42% 83% 17% / 44% 39% 61% 56%; 
+}
+
+/* Trunk */
+.trunk::before {
+  content: '';
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #CC7C06;
+  bottom: 0;
+  width: 10vmin;
+  height: 20vmin;
+  left: 50%;
+}
+
+
+/* Snow front of trunk */
+.trunk::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  bottom: -5vmin;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40vmin;
+  height: 13vmin;
+  border-radius: 58% 42% 83% 17% / 44% 39% 61% 56%;
+}
+
+.star {
+  --star-color: rgba(255, 252, 2, 0.5);
+
+  -webkit-animation: starFlash 2s infinite;
+
+          animation: starFlash 2s infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  position: absolute;
+  top: 2vmin;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 10vmin;
+  height: 10vmin;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star::before {
+  --star-color: rgba(255, 252, 2, 0.7);
+
+  -webkit-animation: starFlash 2s infinite;
+
+          animation: starFlash 2s infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 10vmin;
+  height: 10vmin;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star::after {
+  --star-color: rgba(255, 252, 2, 1);
+
+  -webkit-animation: starFlash 2s infinite;
+
+          animation: starFlash 2s infinite;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 5vmin;
+  height: 5vmin;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+@-webkit-keyframes starFlash {
+  0% {
+    background-color: transparent;
+  }
+
+  90% {
+    background-color: var(--star-color);
+  }
+}
+
+@keyframes starFlash {
+  0% {
+    background-color: transparent;
+  }
+
+  90% {
+    background-color: var(--star-color);
+  }
+}
+
+.lights-group {
+  --red-light: radial-gradient(#FF5B30, 60%, transparent);
+  --blue-light: radial-gradient(#00CFE4, 60%, transparent);
+  --yellow-light: radial-gradient(var(--yellow), 60%, transparent);
+  --pink-light: radial-gradient(#E43ACB, 60%, transparent);
+  
+  --light-change-interval: 1s;
+  
+  position: absolute;
+  height: 5vmin;
+  display: -webkit-box;
+  display: flex;
+  -webkit-transform: translateX(-50%) rotate(15deg);
+          transform: translateX(-50%) rotate(15deg);
+}
+
+.lights-group.bottom {
+  left: 55%;
+  width: 45vmin;
+  bottom: 29vmin;
+}
+
+.lights-group.top {
+  left: 55%;
+  width: 35vmin;
+  bottom: 47vmin;
+}
+
+/* Curl of cord */
+.light {
+  width: 10vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  box-shadow: 0px 3px 0 var(--background-color);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+/* Light left */
+.light::before {
+  content: '';
+  background: var(--yellow-light);
+  width: 3vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  margin-top: 3vmin;
+  margin-left: -1.5vmin;
+  -webkit-animation: changeLightColor var(--light-change-interval) infinite;
+          animation: changeLightColor var(--light-change-interval) infinite;
+}
+
+.bottom .light:nth-child(2)::before {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.bottom .light:nth-child(3)::before {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.bottom .light:nth-child(4)::before {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.bottom .light::after {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.top .light:nth-child(1)::before {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.top .light:nth-child(2)::before {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.top .light:nth-child(3)::before {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.top .light:after {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+
+/* Light right */
+.light::after {
+  background: var(--yellow-light);
+  width: 3vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  margin-top: 3vmin;
+  margin-right: -1.5vmin;
+  -webkit-animation: changeLightColor var(--light-change-interval) infinite;
+          animation: changeLightColor var(--light-change-interval) infinite;
+}
+
+.light:last-child::after {
+  content: '';
+}
+
+@-webkit-keyframes changeLightColor {
+  0% {
+     background: var(--yellow-light);
+  }
+  
+  25% {
+    background: var(--pink-light);
+  }
+  
+  50% {
+     background: var(--blue-light);
+  }
+  
+  75% {
+    background: var(--red-light);
+  }
+}
+
+@keyframes changeLightColor {
+  0% {
+     background: var(--yellow-light);
+  }
+  
+  25% {
+    background: var(--pink-light);
+  }
+  
+  50% {
+     background: var(--blue-light);
+  }
+  
+  75% {
+    background: var(--red-light);
+  }
+}
