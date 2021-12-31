@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Loading...</title>
+		<style type="text/css">
+			body {
+				background: url(images/1.jpg);
+			}
+			.box {
+				width: 380px;
+				height: 510px;
+				background-color: white;
+				border-radius: 5px;
+				margin: 150px auto;
+				position: relative;
+			}
+			.image{
+				background: url(images/c1.jpg) no-repeat;
+				background-size: 300px;
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				left: 40px;
+				top: 30px;
+				border-radius: 15px;
+			}
+			#password {
+				width: 300px;
+				height: 30px;
+				text-align: center;
+				border: aqua 2px solid;
+				position: absolute;
+				top: 330px;
+				left: -5px;
+				border-radius: 15px;
+			}
+			#login {
+				width: 80px;
+				height: 30px;
+				position: absolute;
+				top: 380px;
+				left: 110px;
+				border: 0px;
+				border-radius: 10px;
+				background: rgba(0,0,0,.2);
+			}
+			#login:active {
+				background: rgba(0,0,0,.3);
+			}
+		</style>
+		<script type="text/javascript">
+			function start(){
+				var a = document.getElementById("password").value;
+				var list = [0,1,8,27,31,26,18,13,17,3,10,11,12,19,5,9,4,29,24,28,14,21,22,23,30,16,20,15,7,2,6,25,32];
+				var password = 1117302618181;
+				// 取得输入字符集长度
+				var size = a.length;
+				// 构架数组和index索引元素
+				var arr = new Array(5);
+				var index = 0;
+				// 通过for循环遍历整个数组
+				for (i = 0; i < size; i+=2){
+					var auto = a.substr(i,2);
+					if(auto > 32){
+						var p = auto.substr(0,1);
+						var end = list[p];
+						i = i - 1;
+						arr[index] = end;
+						index += 1;
+					}else if(auto.substr(0,1) == 0){
+						var q = auto.length;
+						if(q == 1){
+							var end = list[0];
+							arr[index] = end;
+							index += 1;
+						}else{
+							var x = auto.substr(1,2);
+							var end = list[x];
+							arr[index] = end;
+							index += 1;
+						}
+					}else{
+						var end = list[auto];
+						arr[index] = end;
+						index += 1;
+					}
+				}
+				// 将数组中的逗号去除
+				var b = arr.join('');
+				if(b == password){
+					window.location.href="search.html";
+				}else{
+					window.alert("密码错误！！");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="image">
+				<input type="text" name="password" id="password" placeholder="请输入校验码" />
+				<input type="button" name="Login" id="login" value="Login" onclick="start()" />
+			</div>
+		</div>
+	</body>
+</html>

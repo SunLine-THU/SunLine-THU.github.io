@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>welcome to Myword</title>
+		<style type="text/css">
+					body {
+						background: url("images/p1.jpg");
+					}
+					h1 {
+						color: black;
+						font-size: 30px;
+						text-align: center;
+					}
+					h3 {
+						height: 50px;
+						line-height: 50px;
+					}
+					.box {
+						width: 800px;
+						margin:0 auto;
+					}
+					p {
+						font-size: 20px;
+						line-height: 50px;
+					}
+					#htxt {
+						width: 800px;
+						height: 150px;
+					}
+				</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1>java参考答案详解</h1>
+			<hr />
+			<span style="font-size: 30px; display: block; "><b>卷一</b></span>
+			<h3>选择题</h3>
+			<p>
+1.  不允许作为类及类成员的访问控制符的是(   C   )。<br />
+    A. public                      B. private<br />
+    C. static                       D. protected<br />
+ 2. Java application中的主类需包含main方法，以下哪项是main方法的正确形参？（  B  ）<br />
+A.  String  args               B. String  args[]	<br />
+C.  Char  arg		         D. StringBuffer args[]  <br />
+ 3．以下哪个不是Java的原始数据类型（    B  ）<br />
+A. int	                     B. Boolean	  <br />      
+ C. float	                     D. char<br />
+4. 有以下程序片段，下列哪个选项不能插入到行1。（     D  ）<br />
+public  class  Interesting{<br />
+//do sth   <br />
+}<br />
+A. import java.awt.*;	<br />      
+B. package mypackage;	<br />	
+C.class OtherClass{   }	<br />
+D. public class MyClass{ }<br />
+5. 关于方法main（）的说法哪个正确？( C  )<br />
+A．方法main（）只能放在公共类中<br />
+B． main()的头定义可以根据情况任意更改<br />
+C．一个类中可以没有main()方法<br />
+D．所有对象的创建都必须放在main()方法中<br />
+6. 关于选择结构下列哪个说法正确？　(B   )<br />
+A．if语句和 else语句必须成对出现<br />
+B．if语句可以没有else语句对应<br />
+C．switch结构中每个case语句中必须用break语句<br />
+D．switch结构中必须有default语句<br />
+7. while循环和 do…while循环的区别是：　( D  )<br />
+A．没有区别，这两个结构任何情况下效果一样<br />
+B．while循环比 do…while循环执行效率高<br />
+C．while循环是先循环后判断，所以循环体至少被执行一次<br />
+D．do…while循环是先循环后判断，所以循环体至少被执行一次<br />
+8. 应用程序的main方法中有以下语句，则输出的结果是 (  A )。<br />
+<textarea name="txt" clos="100" rows="5" warp="virtual" id="htxt">
+int  b[][]={{1}, {2,2}, {2,2,2}};
+int sum=1;
+for(int i=0;i<b.length;i++)   /{ 
+	for(int /j=0;j<b[i].length;j++) {
+		sum*=b[i][j];
+	}            
+}
+System.out.println("sum="+sum);			
+</textarea><br />
+			
+A． 32     B．11     C． 2     D．  3<br />
+9. void的含义：　　（　A　）<br />
+A．方法没有返回值　　				      B．方法体为空<br />
+C．没有意义           				  D．定义方法时必须使用<br />
+10. 下列说法哪个正确？（  C  ）<br />
+A.不需要定义类，就能创建对象<br />
+B.对象中必须有属性和方法<br />
+C.属性可以是简单变量，也可以是一个对象<br />
+D.属性必须是简单变量<br />
+11.构造函数何时被调用？　　（　A）<br />
+A.创建对象时　　　　　					B. 类定义时<br />
+C.使用对象的方法时　　					D.使用对象的属性时<br />
+12.应用程序的main方法中有以下语句，则输出的结果是 ( A  )。<br />
+		String&nbsp;s1="0.5", s2="12"; <br />
+		double&nbsp;x=Double.parseDouble(s1);<br />
+		int&nbsp;y=Integer.parseInt(s2);<br />
+ 		System.out.println(x+y);<br />
+A. 12.5&nbsp;&nbsp;B. 120.5&nbsp;&nbsp;C. 12&nbsp;&nbsp; D. “12.5”<br />
+13.应用程序的main方法中有以下语句，则输出的结果是 ( A  )。<br />
+<textarea name="txt" clos="100" rows="5" warp="virtual" id="htxt">
+int  b[][]={{1, 1, 1}, {2,2}, {3}};
+int sum=0;
+for(int i=0; i<b.length; i++) {
+for(int j=0; j<b[i].length; j++) {
+	sum+=b[i][j];
+	}
+}
+System.out.println("sum="+sum);
+</textarea><br />
+A. 10&nbsp;&nbsp;B.6&nbsp;&nbsp;C.9&nbsp;&nbsp;D. 13<br />
+14. return语句：　　（　D　）<br />
+A．不能用来返回对象&nbsp;&nbsp;&nbsp;B．方法都必须含有<br />
+C．方法中可以有多句return&nbsp;&nbsp;&nbsp;D．只能让方法返回数值　	<br />
+15.为AB类的一个无形式参数无返回值的方法method书写方法头，使得使用类名AB作为前缀就可以调用它，该方法头的形式为(   A   )。<br />
+    A． static void method( )&nbsp;&nbsp;&nbsp;&nbsp;B． public void method( )    <br />
+    C． final void method( )&nbsp;&nbsp;&nbsp;&nbsp;D．abstract void method( )<br />
+16.应用程序的main方法中有以下语句，则执行后输出的结果是 (   C)。<br />
+<textarea name="txt" clos="100" rows="5" warp="virtual" id="htxt">
+int[] x = {118,79,15,168,98};
+int min = x[0];
+for (int i=1; i<x.length; i++){
+	if(x[i] < min)
+		min = x[i];
+}
+System.out.println(min);
+</textarea><br />
+A．118&nbsp;&nbsp;B． 98&nbsp;&nbsp;C． 15&nbsp;&nbsp;D． 168 <br />
+17.下面的代码段执行之后count的值是什么(   C   )<br />
+<textarea name="txt" clos="100" rows="5" warp="virtual" id="htxt">
+int count = 1;
+for (int i = 1; i <= 5; i++) {
+	count += i;
+}
+System.out.println(count);
+</textarea>
+A. 5&nbsp;&nbsp;B. 1&nbsp;&nbsp;C. 15&nbsp;&nbsp;D. 16<br />
+18.Java语言中存储范围最小的数据类型是（   C     ）。<br />
+A．int&nbsp;&nbsp;B. long&nbsp;&nbsp;C. byte&nbsp;&nbsp;D . short<br />
+19．关于对象成员占用内存的说法哪个正确？　　（　B　）<br />
+A．同一个类的对象共用同一段内存<br />
+B．同一个类的对象使用不同的内存段，但静态成员共享相同的内存空间<br />
+C．对象的方法不占用内存<br />
+D．以上都不对<br />
+20．关于继承的说法正确的是：　　（　B　）<br />
+A．子类将继承父类所有的属性和方法。<br />
+B．子类将继承父类的非私有属性和方法。<br />
+C．子类只继承父类public方法和属性<br />
+D．子类只继承父类的方法，而不继承属性<br />
+</p>
+<h3>判断题</h3>
+<p>
+1．Java的源代码中定义几个类，编译结果就生成几个以.class为后缀的字节码文件。（√） <br />
+2．Java程序里,创建新的类对象用关键字new，回收无用的类对象使用关键字free。 	（x）<br />
+3．Java有垃圾回收机制，内存回收程序可在指定的时间释放内存对象。          	（x）<br />
+4．构造函数用于创建类的实例对象，构造函数名应与类名相同，返回类型为void。 	（x）<br />
+5．重载和重写是方法的同一表现形式不同说法。                              	（ √ ）<br />
+6．拥有abstract方法的类是抽象类，但抽象类中可以没有abstract方法。            	（ √ ）<br />
+7．Java的屏幕坐标是以像素为单位，容器的左下角被确定为坐标的起点。        	（x）<br />
+8．静态初始化器是在其所属的类加载内存时由系统自动调用执行。              	（ √ ）<br />
+9．在Java中对象可以赋值，只要使用赋值号（等号）即可，相当于生成了一个各属性与赋值对象相同的新对象。（x）<br />
+10．每一个JAVA类中都必须包含main函数。                                   	（x）<br />
+</p>
+<h3>填空</h3>
+<p>
+1. 在Java程序中，通过类的定义只能实现　【1】<u></u><u> 单　</u>重继承，定义接口关键字是　【2】<u></u><u> 多　</u>。<br />
+2. Java中布尔类型的常量有两种，它们是　【3】<u></u><u>true　</u>和　【4】<u></u><u>false</u>　。<br />
+3.设 x = 2 ，则表达式 ( x + + )／3 的值是　【5】<u></u><u>0　 </u><br />
+4.应用程序的main方法中有以下语句，则输出的结果是　【6】<u></u><u>123#456#　</u>。<br />
+		String s = "xx#123#456# ";<br />
+		int n = s.length( );<br />
+    	int k = s.indexOf("#");//定位字符第一次出现所在位置<br />
+		String s2 = s.substring(k, n-1);<br />
+		System.out.println(s2);	<br />
+5.public class abc<br />
+    {<br />
+          public static void main(String args[ ])<br />
+          {    int i, s = 0 ;<br />
+               int a[ ] = { 10 , 20 , 30 , 40 , 50 , 60 , 70 , 80 , 90 };<br />
+               for ( i = 0 ; i < a.length ; i ++ )<br />
+                     if ( a[i]%3 = = 0 ) <br />
+ s += a[i] ; <br />
+               System.out.println("s="+s);  <br />  
+ }<br />
+}<br />
+               以下程序的输出结果为　【7】<u></u><u>180　</u><br />
+6.在Java中定义一个字符串类型的变量str的语句是：　【8】<u></u><u>String str　</u>，定义一个具有10个元素的整型数组a的语句是：　【9】<u></u><u>int [ ]arr=new int[10];　</u>。<br />
+7.导入mypackage包中的所类的命令是　【10】<u></u><u>import mypackage.*;　</u>。<br />
+8.数组元素的下标从　【11】<u></u><u>0　</u>开始。<br />
+9.在定义方法时，如果方法没有返回值，则返回值类型要声明为　【12】<u></u><u>void　</u><br />
+10. Java语言将存储范围大的数值类型转换为存储范围小的数值类型时，采用转换　【13】<u></u><u>　强制  </u>（强制/自动）。<br />
+11. Java语言中，单目运算符有　【14】<u></u><u>2   </u>个操作数，双目运算符有　【15】<u></u><u>3  </u>个操作数。<br />
+</p>
+<h3>简答题</h3>
+<p>
+<h2>1. 运行时异常与一般异常有何异同?（3分）</h2>
+异常表示程序运行过程中可能出现的非正常状态，运行时异常表示虚拟机的通常操作中可能遇到的异常，是程序员编程错误造成的，属于程序的bug。Java编译器要求方法必须声明抛出可能发生的非运行时异常，但是并不要求必须声明抛出未被捕获的运行时异常。
+
+<h2>2.error和Exception的区别（3分）</h2>
+Java异常结构中定义有Throwable类，Exception和Error是其派生的两个子类。其中Exception表示由于网络故障、文件损坏、设备错误、用户输入非法等情况导致的异常；而Error表示Java运行时环境出现的错误，例如：JVM内存资源耗尽等。
+
+<h2>3．请写出5种常见到的runtime exception？（3分）</h2>
+NullPointerException：当操作一个空引用时会出现此错误。
+NumberFormatException：数据格式转换出现问题时出现此异常。
+ClassCastException：强制类型转换类型不匹配时出现此异常。
+ArrayIndexOutOfBoundsException：数组下标越界，当使用一个不存在的数组下标时出现此异常。
+ArithmeticException：数学运行错误时出现此异常
+
+<h2>4．同步和异步有何异同，在什么情况下分别使用他们？请举例说明（3分）</h2>
+如果数据将在线程间共享，例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就是共享数据，必须进行同步存取。当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。
+
+<h2>5.  UDP和TCP连接有何异同。（3分）</h2>
+TCP协议是面向连接的，每个数据包的传输过程是：先建立链路、数据传输、然后清除链路。数据包不包含目的地址,受端和发端不但顺序一致，而且内容相同,它的可靠性高； UDP协议是面向无连接的，每个数据包都有完整的源、目的地址及分组编号，各自在网络中独立传输，传输中不管其顺序，数据到达收端后再进行排序组装，遇有丢失、差错和失序等情况，通过请求重发来解决，它的效率比较高。
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr >
+<br>
+<br>
+<p>
+<span style="font-size: 30px; display: block; "><b>卷二</b></span>
+1.  覆盖与重载的关系是 （A　　）<br />
+A. 覆盖只有发生在父类与子类之间，而重载可以发生在同一个类中<br />
+B. 覆盖方法可以不同名，而重载方法必须同名<br />
+C. final修饰的方法可以被覆盖，但不能被重载<br />
+D. 覆盖与重载是同一回事<br />
+2．编译Java  Application 源程序文件将产生相应的字节码文件，这些字节码文件的扩展名为(    B  )。<br />
+    A. java                      B. .class<br />
+C. html                      D. .exe<br />
+3. 如下哪个是Java中的标识符(  C) <br />
+A. public   	    B. super		  C.width          D.3number  <br />
+4. Java application中的主类需包含main方法，以下哪项是main方法的正确形参？（B    ）<br />
+A.  String  args               B. String  args[]	<br />
+C.  Char  arg		         D. StringBuffer args[]  <br />
+ 5．以下哪个不是Java的原始数据类型（    B  ）<br />
+A. int	                     B. Boolean	        <br />
+ C. float	                     D. char<br />
+6. 在使用interface声明一个接口时，只可以使用（  D   ）修饰符修饰该接口。<br />
+A. private  	   B.protected	  C.private  protected	   D. public<br />
+7. 定义一个类，必须使用的关键字是(A  )<br />
+A. public		   B. class		  C. interface		   D. static<br />
+8.已知如下定义：String s = "story"; 下面哪个语句不是合法的(C )<br />
+A. s += "books";			   B. s = s + 100;<br />
+C.int len = s.length;			   D. String t = s + “abc”;<br />
+9 . 给出下面代码，关于该程序以下哪个说法是正确的？( C )<br />
+public class Person{ <br />
+static int arr[] = new int[5];<br />
+public static void main(String a[]) <br />
+{ <br />
+System.out.println(arr[0]);　}<br />
+} <br />
+A.编译时将产生错误		     B.编译时正确，运行时将产生错误<br />
+C.输出零		                 D.输出空<br />
+10. 下面的代码段执行之后count的值是什么(    C  )<br />
+	int count = 1;<br />
+	for (int i = 1; i <= 5; i++) {<br />
+		count += i;<br />
+	}<br />
+	System.out.println(count);<br />
+A. 5		 B. 1			C. 15  		D. 16<br />
+11. 声明并创建一个按钮对象b，应该使用的语句是(  A    )<br />
+A. Button b=new Button();		B. button b=new button();<br />
+C. Button b=new b();			D. b.setLabel(“确定”);<br />
+12.不允许作为类及类成员的访问控制符的是(    C  )。<br />
+　 A. public                     B. private<br />
+    C. static                      D. protected<br />
+13. 关于接口哪个正确？　　（D　　）<br />
+A.接口和抽象类是同一回事<br />
+B.一个类只能实现一个接口 <br />
+C.接口间不能有继承关系<br />
+D.实现一个接口必须实现接口的所有方法<br />
+14.异常包含下列哪些内容？　　（　D　）<br />
+A.程序执行过程中遇到的事先没有预料到的情况<br />
+B.程序中的语法错误　　<br />
+C.程序的编译错误<br />
+D.以上都是<br />
+15. 应用程序的main方法中有以下语句，则输出的结果是 ( C  )。<br />
+<textarea name="txt" clos="100" rows="5" warp="virtual" id="htxt">
+int  b[][]={{1}, {2,2}, {2,2,2}};
+int sum=0;
+for(int i=0;i<b.length;i++) {            
+	for(int j=0;j<b[i].length;j++) {
+		sum*=b[i][j];
+		}            
+	}
+System.out.println("sum="+sum);
+</textarea><br />
+A.  2     B. 11     C.  32     D.   3   <br />
+16. 关于方法main（）的说法哪个正确？(  C )<br />
+A．方法main（）只能放在公共类中<br />
+B  main()的头定义可以根据情况任意更改<br />
+C．一个类中可以没有main()方法<br />
+D．所有对象的创建都必须放在main()方法中<br />
+17. 关于选择结构下列哪个说法正确？　( B  )<br />
+A．if语句和 else语句必须成对出现<br />
+B．if语句可以没有else语句对应<br />
+C．switch结构中每个case语句中必须用break语句<br />
+D．switch结构中必须有default语句<br />
+18. while循环和 do…while循环的区别是：　(  D )<br />
+A．没有区别，这两个结构任何情况下效果一样<br />
+B．while循环比 do…while循环执行效率高<br />
+C．while循环是先循环后判断，所以循环体至少被执行一次<br />
+D．do…while循环是先循环后判断，所以循环体至少被执行一次<br />
+19.以下关于继承的叙述正确的是（   A    ）。<br />
+A．在Java中类只允许单一继承<br />
+B．在Java中一个类只能实现一个接口<br />
+C．在Java中一个类不能同时继承一个类和实现一个接口<br />
+D．在Java中接口只允许单一继承<br />
+20. 设有下面两个赋值语句：<br />
+ a = Integer.parseInt(“12”);<br />
+         b = Integer.valueOf(“12”).intValue();<br />
+     下述说法正确的是（    D ）。<br />
+A．a是整数类型变量，b是整数类对象。<br />
+B．a是整数类对象，b是整数类型变量。<br />
+C．a和b都是整数类对象并且值相等。	<br />
+D．a和b都是整数类型变量并且值相等。<br />
+21.有以下方法的定义，请选择该方法的返回类型（   D  ）。<br />
+	ReturnType  method(byte x, double y)<br />
+	{		return (short) x/y*2;<br />
+	}<br />
+A．byte	        B．short	     C．int	       D．double<br />
+22.应用程序的main方法中有以下语句，则执行后输出的结果是 ( B  )。<br />
+<textarea name="txt" clos="100" rows="5" warp="virtual" id="htxt">
+int[] x = {125,21,5,168,98};
+int min = x[0];
+for (int i=1; i<x.length; i++){
+	if(x[i] < min)
+		min = x[i];
+}
+System.out.println(min);
+</textarea><br />
+A． 125          B． 5         C． 98        D． 168  <br />
+23．关于对象成员占用内存的说法哪个正确？　　（B　　）<br />
+A．同一个类的对象共用同一段内存<br />
+B．同一个类的对象使用不同的内存段，但静态成员共享相同的内存空间<br />
+C．对象的方法不占用内存<br />
+D．以上都不对<br />
+24．关于继承的说法正确的是：　　（　　B）<br />
+A．子类将继承父类所有的属性和方法。<br />
+B．子类将继承父类的非私有属性和方法。<br />
+C．子类只继承父类public方法和属性<br />
+D．子类只继承父类的方法，而不继承属性<br />
+25．关于构造函数的说法哪个正确？　　（　C　）<br />
+A．一个类只能有一个构造函数<br />
+B．一个类可以有多个不同名的构造函数<br />
+C．构造函数与类同名<br />
+D．构造函数必须自己定义，不能使用父类的构造函数<br />
+</p>
+<h3>填空</h3>
+<p>
+1.抽象(abstract)  方法是一种仅有方法头，没有具体方法体和操作实现的方法，该方法必须在抽象类之中定义。　【2】<u>最终(final) </u>　方法是不能被当前类的子类重新定义的方法。<br />
+2. 在Java程序中，通过类的定义只能实现　【3】<u>单　</u>重继承，但通过接口的定义可以实现　【4】<u>　多重继承关系</u>。<br />
+3. Java程序中的单行注释符是　【5】<u>//</u>　，多行注释符是　【6】<u>/* */</u>　。<br />
+4. Java中布尔类型的常量有两种，它们是　【7】<u>true　</u>和　【8】<u>false　</u>。<br />
+5. 以下程序的输出结果为　【9】<u>相等　 </u> 。<br />
+class StringTest1 {<br />
+	public static void main(String[] args) <br />
+	{<br />
+		String s1="hello";<br />
+		String s2=new String("hello");<br />
+		if(s1.equals(s2)){<br />
+	System.out.println("相等");<br />
+		}else{<br />
+			System.out.println("不相等");<br />
+		}<br />
+	}<br />
+6. 以下程序的输出结果为　【10】<u>Peter is 17 years old!　</u>。<br />
+public class Person {<br />
+	String name;<br />
+	int age;<br />
+	public Person(String name, int age) {<br />
+		this.name = name;<br />
+		this.age = age;<br />
+	}<br />
+	public static void main(String[] args) {<br />
+		Person c = new Person("Peter", 17);<br />
+		System.out.println(c.name + " is " + c.age + " years old!");<br />
+	}<br />
+}<br />
+</p>
+
+
+<h3>综合题</h3>
+<p>
+<h2>1．什么是节点流和过滤流。（5分）</h2>
+节点流：从特定的地方读写的流类，例如：磁盘或一块内存区域。<br />
+过滤流：使用节点流作为输入或输出。过滤流是使用一个已经存在的输入流或输出流连接创建的。<br />
+
+<h2>2． sleep()和wait()有什么区别。（5分）</h2><br />
+sleep是线程类（Thread）的方法，导致此线程暂停执行指定时间，给执行机会给其他线程，但是监控状态依然保持，到时后会自动恢复。调用sleep不会释放对象锁。<br />
+wait是Object类的方法，对此对象调用wait方法导致本线程放弃对象锁，进入等待此对象的等待锁定池，只有针对此对象发出notify方法（或notifyAll）后本线程才进入对象锁定池准备获得对象锁进入运行状态。<br />
+3． <br />
+<h2>3．按以下要求编写程序（10分）</h2><br />
+(1) 创建一个Rectangle类，添加width和height两个成员变量<br />
+(2) 在Rectangle中添加两种方法分别计算矩形的周长和面积<br />
+(3) 编程利用Rectangle输出一个矩形的周长和面积<br />
+public class Rectangle {<br />
+	float width, height;<br />
+		public Rectangle(float width, float height) {<br />
+		this.width = width;<br />
+		this.height = height;<br />
+	}                                                    （3分）<br />
+	<br />
+	public float getLength(){<br />
+		return (this.width + this.height) * 2;<br />
+	}<br />
+		public float getArea(){<br />
+		return this.width * this.height;<br />
+	}                                                     （3分）<br />
+	public static void main(String [] args) {<br />
+		Rectangle rect = new Rectangle(10, 20);<br />
+		System.out.println("周长是：" + rect.getLength());<br />
+		System.out.println("面积是：" + rect.getArea());<br />
+	}                                                      （4分）<br />
+}<br />
+<br />
+<h2>4．阅读程序，给出结果：（10分）</h2>
+// AbstractClassDemo.java源代码如下：<br />
+abstract class Shape {     //定义抽象类Shape和抽象方法display<br />
+	abstract void display();<br />
+}<br />
+class Circle extends Shape {<br />
+	void display() {		//实现抽象类的方法<br />
+		System.out.println("Circle");<br />
+	}<br />
+}<br />
+class Rectangle extends Shape {<br />
+	void display() {    //实现抽象类的方法		<br />
+System.out.println("Rectangle");<br />
+	}<br />
+}<br />
+class Triangle extends Shape {<br />
+	void display() {  	//实现抽象类的方法<br />
+		System.out.println("Triangle");<br />
+	}<br />
+}<br />
+public class AbstractClassDemo{<br />
+	public static void main(String args[]){<br />
+		(new Circle()).display();	//定义无名对象来调用对应的display方法<br />
+		(new Rectangle()).display();<br />
+		(new Triangle()).display();<br />
+	}        <br />
+	(1) Circle； (2) Rectangle； (3) Triangle。（每个3分，全对10分）<br />
+
+</p>
+<hr />
+<p><em>author:暖阳</em></p>
+<p><em>date:21-12-28</em></p>
+<p><em>version:1.0</em></p>
+		</div>
+	</body>
+</html>
