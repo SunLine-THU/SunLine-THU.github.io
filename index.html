@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title id="title1">▶ Happy new year!</title>
+		<link rel="icon" href="images/1.ico"/>
+		<style type="text/css">
+			ul,li {
+				list-style: none;
+			}
+			body {
+				background: rgba(0,0,0,.7);
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				height: 809px;
+				width: 1440px;
+			}
+			.box {
+				position: relative;
+				width: 1440px;
+				height: 809px;
+				transition: all .5s;
+			}
+			.header_map {
+				position: absolute;
+				height: 100px;
+				width: 100%;
+				background: rgba(0,0,0,.4);
+				z-index: 10;
+			}
+			#szb_video1 {
+				position: absolute;
+			}
+			#gun {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				position: absolute;
+				left: 134px;
+			}
+			footer {
+				height: 40px;
+				width: 100%;
+				position: absolute; 
+				z-index: 10;
+				bottom: 0;
+				background: rgba(0,0,0,.7);
+			}
+			@media (min-width: 150px) {
+				.box {
+					width: 1440px;
+					height: 100%;
+				}
+				#szb_video1 {
+					width: 1440px;
+					height: 100%px;
+				}
+			}
+			@media (min-width: 800px) {
+				.box {
+					width: 1440px;
+					height: 809px;
+				}
+				#szb_video1 {
+					width: 1440px;
+					height: 809px;
+				}
+			}
+			.work {
+				position: absolute;
+				top: 20%;
+				z-index: 10;
+			}
+			ul li {
+				background-color: rgba(18,18,18,0.8);
+				width: 420px;
+				height: 450px;
+				float: left;
+				display: flex;
+				margin-left: 20px;
+				border-radius: 15px;
+				position: relative;
+				transition: all .5s;
+			}
+			ul li a {
+				width: 100%;
+				height: 100%;
+				text-decoration: none;
+			}
+			li:hover {
+				transform: scale(1.05);
+			}
+			#head_img:hover {
+				transform: scale(1.05);
+			}
+		</style>
+		<script type="text/javascript">
+			function aho() {
+				window.alert("被点击");
+			}
+			function hello() {
+				var music = document.getElementById("music");
+				var span = document.getElementById("span1");
+				if (music.paused){
+					music.play();
+					document.title="▶ Happy new year!️"
+					span.innerHTML="";
+				}else {
+					music.pause();
+					document.title="Happy new year!"
+					span.innerHTML="▶";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<audio src="http://music.163.com/song/media/outer/url?id=1492276426.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
+			<div class="header_map">
+				<img id="head_img" title="点我开启或关闭音乐" src="images/1.ico" onclick="hello()" style="position: absolute; top: 15px; left: 35px;transition: all .5s;" >
+				<span id="span1" style="color: rgba(250,250,250,.7); position: absolute;font-size: 40px; top: 20px;left: 55px; user-select:none;" onclick="hello()"></span>
+				<div id="gun">
+					<marquee scrolldelay="100" scrollamount="10"><span style="line-height: 100px;font-size: 40px;color: white;font-family: 楷体;">施工中......</span></marquee>
+				</div>
+			</div>
+			<div class="work">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="https://ys.mihoyo.com/main/_nuxt/img/37207c1.jpg" style="width: 380px; height: 190px;position: absolute;top: 30px; left: 21px;" >
+							<span style="color: whitesmoke; font-size: 30px;position: absolute; top: 230px; left: 10px">「关于我」</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://ys.mihoyo.com/main/_nuxt/img/37207c1.jpg" style="width: 380px; height: 190px;position: absolute;top: 30px; left: 21px;" >
+							<span style="color: whitesmoke; font-size: 30px;position: absolute; top: 230px; left: 10px">「学年规划」</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="aho()">
+							<img src="https://ys.mihoyo.com/main/_nuxt/img/37207c1.jpg" style="width: 380px; height: 190px;position: absolute;top: 30px; left: 21px;" >
+							<span style="color: whitesmoke; font-size: 30px;position: absolute; top: 230px; left: 10px">「加入团伙」</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<footer><span style="font-size: 15px;color: rgba(250,250,250,.7);text-align: center;line-height: 40px;margin: 0 auto;display: block;">版权所有&copy; 暖阳THU</span></footer>
+			<div class="video">
+				<video id="szb_video1" autoplay="autoplay" loop="loop">
+					<source src="https://ys.mihoyo.com/main/_nuxt/videos/3e78e80.mp4" type="audio/mp4">
+				</video>
+			</div>
+		</div>
+		<span style="font-size: 15px;color: rgba(250,250,250,.7);text-align: center;line-height: 40px;margin: 15px auto;display: block;">下方正在施工中....如果您能看见这行字，请使用电脑端浏览器打开！！</span>
+		<progress style="margin: 0 auto;display: block;">70%</progress>
+	</body>
+</html>
