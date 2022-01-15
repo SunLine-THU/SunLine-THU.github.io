@@ -3,160 +3,277 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title id="title1">▶ Happy new year!</title>
+		<title>暖阳THU StudySpace</title>
 		<link rel="icon" href="images/1.ico"/>
+		<!-- 导入在线样式表用于i标签 -->
+		<script src="https://kit.fontawesome.com/36c979deae.js" crossorigin="anonymous"></script>
 		<style type="text/css">
-			ul,li {
-				list-style: none;
+			* {
+				cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
 			}
 			body {
-				background: rgba(0,0,0,.7);
 				margin: 0;
 				padding: 0;
-				overflow: hidden;
-				height: 809px;
-				width: 1440px;
-			}
-			.box {
-				position: relative;
-				width: 1440px;
-				height: 809px;
 				transition: all .5s;
-				z-index: 9;
-				overflow: hidden;
+				cursor:url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
 			}
-			.header_map {
-				position: absolute;
-				height: 100px;
-				width: 100%;
-				background: rgba(0,0,0,.4);
-				z-index: 10;
+			ul {
+				list-style: none;
 			}
-			#szb_video1 {
-				position: absolute;
+			/* pc端 */
+			#pc_box {
+				height: 1900px;
+				transition: all .5s;
+				position: relative;
+				/* border: #000000 2px solid; */
 			}
-			#gun {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				position: absolute;
-				left: 134px;
+			#pc_work {
+				width: 800px;
+				height: 1900px;
+				/* border: #000000 2px solid; */
+				margin: 0 auto;
+				position: relative;
 			}
-			footer {
-				height: 40px;
-				width: 100%;
-				position: absolute; 
-				z-index: 10;
-				bottom: 0;
-				background: rgba(0,0,0,.7);
-			}
-			@media (min-width: 150px) {
-				.box {
-					width: 1440px;
-					height: 100%;
-				}
-				#szb_video1 {
-					width: 1440px;
-					height: 100%px;
-				}
-			}
-			@media (min-width: 800px) {
-				.box {
-					width: 1440px;
-					height: 809px;
-				}
-				#szb_video1 {
-					width: 1440px;
-					height: 809px;
-				}
-			}
-			.work {
-				position: absolute;
-				top: 20%;
-				z-index: 10;
-			}
-			ul li {
-				background-color: rgba(18,18,18,0.8);
-				width: 420px;
-				height: 450px;
-				float: left;
-				display: flex;
-				margin-left: 20px;
+			#pc_head_readme {
+				height: 1067px;
+				background: rgba(255,248,220,.9);
 				border-radius: 15px;
-				position: relative;
+			}
+			#pc_nav{
 				transition: all .5s;
-			}
-			ul li a {
+				height: 80px;
 				width: 100%;
-				height: 100%;
-				text-decoration: none;
+				background-color: white;
+				position: fixed;
+				box-shadow: 0 1px 20px;
+				z-index: 10;
 			}
-			li:hover {
-				transform: scale(1.05);
+			#pc_nav_bak {
+				height: 80px;
+				width: 100%;
 			}
-			#head_img:hover {
-				transform: scale(1.05);
+			.pc_head_name {
+				font-size: 25px;
+				line-height: 40px;
+				font-weight: 600;
+				position: absolute;
+				left: 130px;
+				top: 15px;
+				color: black;
+				padding: 5px;
+				user-select: none;
+			}
+			.pc_head_name:hover {
+				color: white;
+				background-color: orange;
+				border-radius: 9px;
+			}
+			.pc_work_head {
+				height: 400px;
+				width: 100%;
+				/* border: red 2px solid; */
+				position: absolute;
+				top: 190px;
+				
+			}
+			.li_img:hover {
+				transform: scale(1.5);
+				cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/ayuda.cur),auto;
+			}
+			#pc_work_head_img:hover{
+				transform: rotate(360deg);
+			}
+			.title_1 {
+				margin: 60px auto;
+				width: 80%;
+				height: 300px;
+				border-radius: 5px;
+				box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);
+				overflow: hidden;
+				
+			}
+			.title_img {
+				transition: all .3s;
+			}
+			.title_1:hover .title_img{
+				transform: scale(1.5);
+			}
+			
+			/* h1将作为文章标题前标识符 */
+			h1 {
+				font-size: 18px;
+				color: #959595;
+				font-weight: 300;
+				border-bottom: 1px dashed #ececec;
+				border-bottom-width: 2px;
+				border-bottom-style: dashed;
+				border-bottom-color: rgb(236, 236, 236);
+			}
+			
+			
+			
+			
+			/* 移动端 */
+			#mobile_box {
+				border: red solid 2px;
+				width: 100%;
+				height: 1900px;
+				margin: 0 auto;
 			}
 		</style>
 		<script type="text/javascript">
-			function aho() {
-				window.alert("被点击");
+			// 加载页面
+			var d = setTimeout(img,1);
+			function img(){
+				setInterval(function() {
+					var width = window.screen.width;
+				},100)
 			}
-			function hello() {
-				var music = document.getElementById("music");
-				var span = document.getElementById("span1");
-				if (music.paused){
-					music.play();
-					document.title="▶ Happy new year!️"
-					span.innerHTML="";
+			var s = setTimeout(load,1);
+			function load(){
+				document.getElementById("pc_goto_top_tip").style.display= "none";
+				document.getElementById("pc_box").style.display= "none";
+				document.getElementById("mobile_box").style.display = "none";
+				document.getElementById('gif').src = document.getElementById('gif').src
+			}
+			
+			// 暂时关闭加载页面 默认2500
+			var t = setTimeout(goon,1);
+			function goon(){
+				document.getElementById("body").style.background = "url(images/1.jpg) no-repeat";
+				document.getElementById("load").style.display="none";
+				setInterval(function() {
+					var width = window.screen.width;
+					if (width < 800){
+						document.getElementById("pc_box").style.display= "none";
+						document.getElementById("mobile_box").style.display = "";
+					}else {
+						document.getElementById("pc_box").style.display= "";
+						document.getElementById("mobile_box").style.display = "none";
+					}
+				},100)
+			}
+			
+			// nav
+			var ls = setTimeout(covernav,1);
+			function covernav() {
+				document.getElementById("pc_goto_top").style.display = "none";
+				document.getElementById("pc_nav").style.display = "none";
+			}
+			window.onscroll = function() {
+				// 获取滚动条向下拉上方遮盖多少像素
+				var navtop = document.documentElement.scrollTop || document.body.scrollTop;
+				if (navtop >= 100){
+					document.getElementById("pc_nav").style.display = "";
 				}else {
-					music.pause();
-					document.title="Happy new year!"
-					span.innerHTML="▶";
+					document.getElementById("pc_nav").style.display = "none";
 				}
+				if (navtop >= 600){
+					document.getElementById("pc_goto_top").style.display = "";
+				}else{
+					document.getElementById("pc_goto_top").style.display = "none";
+				}
+				// 音乐播放暂时关闭
+				// if (navtop >= 600){
+				// 	document.getElementById("music1").play();
+				// }else {
+				// 	document.getElementById("music1").pause();
+				// }
 			}
+			
+			function pc_goto_top(){
+				document.documentElement.scrollTop = "0";
+				document.body.scrollTop = "0";
+				document.getElementById("pc_goto_top_tip").style.display= "";
+				setTimeout(pc_goto_top_tip_on,1);
+			}
+			
+			function pc_goto_top_tip_on() {
+				var width = window.screen.width;
+				document.getElementById("pc_goto_top_tip").style.right = width/2 - 200 + "px";
+				setTimeout(pc_goto_top_tip_off,2000);
+			}
+			
+			function pc_goto_top_tip_off() {
+				document.getElementById("pc_goto_top_tip").style.display= "none";
+			}
+
 		</script>
 	</head>
-	<body>
-		<div class="box">
-			<audio src="http://music.163.com/song/media/outer/url?id=1492276426.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
-			<div class="header_map">
-				<img id="head_img" title="点我开启或关闭音乐" src="images/1.ico" onclick="hello()" style="position: absolute; top: 15px; left: 35px;transition: all .5s;" >
-				<span id="span1" style="color: rgba(250,250,250,.7); position: absolute;font-size: 40px; top: 20px;left: 55px; user-select:none;" onclick="hello()"></span>
-				<div id="gun">
-					<marquee scrolldelay="100" scrollamount="10"><span style="line-height: 100px;font-size: 40px;color: white;font-family: 楷体;">施工中......</span></marquee>
+	<body id="body">
+		<audio id="music1" src="http://music.163.com/song/media/outer/url?id=1492276426.mp3" loop="loop">
+			当前浏览器不支持audio
+		</audio>
+		<!-- 加载页面 -->
+		<div id="load" style="width: 300px; margin: 150px auto;">
+			<img id="gif" src="images/loading.gif" style="width: 350px;height: 250px;">
+		</div>
+		
+		<!-- 电脑端 -->
+		<div id="pc_box">
+			<div id="pc_head_title">
+				<div id="pc_nav">
+					<img src="images/1.ico" style="position: absolute;left: 25px;top: 9px;user-select: none;" >
+					<span class="pc_head_name">暖阳THU</span>
 				</div>
 			</div>
-			<div class="work">
-				<ul>
-					<li>
-						<a href="#">
-							<img src="https://ys.mihoyo.com/main/_nuxt/img/37207c1.jpg" style="width: 380px; height: 190px;position: absolute;top: 30px; left: 21px;" >
-							<span style="color: whitesmoke; font-size: 30px;position: absolute; top: 230px; left: 10px">「关于我」</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="https://ys.mihoyo.com/main/_nuxt/img/37207c1.jpg" style="width: 380px; height: 190px;position: absolute;top: 30px; left: 21px;" >
-							<span style="color: whitesmoke; font-size: 30px;position: absolute; top: 230px; left: 10px">「学年规划」</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" onclick="aho()">
-							<img src="https://ys.mihoyo.com/main/_nuxt/img/37207c1.jpg" style="width: 380px; height: 190px;position: absolute;top: 30px; left: 21px;" >
-							<span style="color: whitesmoke; font-size: 30px;position: absolute; top: 230px; left: 10px">「加入团伙」</span>
-						</a>
-					</li>
-				</ul>
+			<div id="pc_nav_bak">
+				<span class="pc_head_name">暖阳THU</span>
 			</div>
-			<footer><span style="font-size: 15px;color: rgba(250,250,250,.7);text-align: center;line-height: 40px;margin: 0 auto;display: block;">版权所有&copy; 暖阳THU</span></footer>
-			<div class="video">
-				<video id="szb_video1" autoplay="autoplay" loop="loop">
-					<source src="https://ys.mihoyo.com/main/_nuxt/videos/3e78e80.mp4" type="audio/mp4">
-				</video>
+			<div id="pc_work">
+				<div class="pc_work_head">
+					<div id="pc_work_head_img" style="width: 128px;height: 128px;position: absolute;left: 336px;border-radius: 64px;overflow: hidden; border: rgba(0, 0, 0, 0.1) 4px solid; box-shadow: 0 0 10px;transition: all .7s;">
+						<img src="images/1.ico" style="width: 128px;height: 128px;user-select: none;" >
+					</div>
+					<div id="pc_work_head_readme" style="width: 600px;height: 200px;background-color: rgba(0, 0, 0, 0.2);position: absolute;top: 150px; left: 100px; box-shadow: 0 0 50px;border-radius: 9px;">
+						<span style="font-size: 25px;color: white;font-weight: 500;position: absolute; left: 190px;top: 30px;user-select: none;">My personal website</span>
+						<ul style="user-select: none;">
+							<li title="首页" style="width: 32px;position: absolute;top: 110px;"><a href="#"><img class="li_img" src="images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="bilibili" style="width: 32px;position: absolute;top: 110px; left: 150px;"><a href="https://space.bilibili.com/182358060" target="_blank"><img class="li_img" src="http://sakura.xiaoyou66.com/themes/sakura/static/image/sns/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="GitHub" style="width: 32px;position: absolute;top: 110px; left: 260px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="http://sakura.xiaoyou66.com/themes/sakura/static/image/sns/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 工作区域 -->
+				<div id="new_work_left" style="width: 25%;height: 910px;border: pink 2px solid;position: absolute;top: 987px;left: -10%;">
+					
+				</div>
+				<div id="new_work" style="width: 70%;height: 910px;border: pink 2px solid;position: absolute;top: 987px;left: 15%;">
+					<h1><span style="font-size: 25px; margin-left: 10px;"><i class="far fa-clock"></i></span>&nbsp;最新文章</h1>
+					<div class="title_1">
+						<img class="title_img" src="https://s3.mashiro.top/view/2018/05/13/image-404.png" style="width: 470px;height: 300px; float: right;" >
+					</div>
+					<div class="title_1">
+						
+					</div>
+
+				</div>
+				<div id="new_work_right" style="width: 25%;height: 910px;border: pink 2px solid;position: absolute;top: 987px;left: 85%;">
+					
+				</div>
+				
+				
 			</div>
+			<div class="pc_work_head_end" style="height: 217px;width: 100%; position: absolute;top: 983px;z-index: 9;">
+				<div style="background: url(images/wave1.png);background-repeat: repeat-x;height: 217px;"></div>
+			</div>
+			<div id="pc_goto_top" style="background: whitesmoke; width: 40px;height: 40px;position: fixed;right: 40px;bottom: 50px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
+				<span style="user-select: none;" onclick="pc_goto_top()">回到顶部</span>
+			</div>
+			<div id="pc_goto_top_tip" style="background: #fde2e2; width: 400px;height: 40px;position: fixed;top: 10px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
+				<div style="width: 32px;height: 32px;display: inline-block;padding-top: 3px;padding-left: 3px; padding-right: 100px;float: left;">
+					<img src="images/1.ico" style="width: 32px;height: 32px;">
+				</div>
+				<span style="user-select: none;text-align: center;color: #F56C6C;font-size: 14px;font-weight: 600;line-height: 40px;">已回到顶部</span>
+			</div>
+			
 		</div>
-		<span style="font-size: 15px;color: rgba(250,250,250,.7);text-align: center;line-height: 40px;margin: 15px auto;display: block;">下方正在施工中....如果您能看见这行字，请使用电脑端浏览器打开！！</span>
-		<progress style="margin: 0 auto;display: block;">70%</progress>
+		
+		
+		<!-- 手机端 -->
+		<div id="mobile_box">
+			
+		</div>
 	</body>
 </html>
