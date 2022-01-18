@@ -207,13 +207,13 @@
 			// 定义曲库
 			// 命名规则曲名加人名不得超过9字
 			var music = [
-				{id: 1,url: "https://sharefs.ali.kugou.com/202201172035/37c3cfe2783495e00658c2b941ce2520/G113/M01/00/15/UZQEAFmvs_GAWEvMADZhzt1fmGQ829.mp3",name: "哪里都是你 - 队长",img: "http://imge.kugou.com/stdmusic/150/20210207/20210207210121169377.jpg"},
-				{id: 2,url: "https://sharefs.ali.kugou.com/202201172051/2b7f835df73a9193a86d41ffa89d1d43/KGTX/CLTX001/7580083a998727a8424efc3de1a66ed5.mp3",name: "明明就 - 杨雪婧",img: "http://imge.kugou.com/stdmusic/150/20210405/20210405124407772522.jpg"},
+				{id: 1,url: "https://music.163.com/song/media/outer/url?id=488249475.mp3",name: "哪里都是你 - 队长",img: "http://imge.kugou.com/stdmusic/150/20210207/20210207210121169377.jpg"},
+				{id: 2,url: "https://music.163.com/song/media/outer/url?id=1892562874.mp3",name: "落在生命里的光 - 尹昔..",img: "https://p1.music.126.net/UAx4r7pN-53CNbiqQ4CcXQ==/109951166589723188.jpg?param=130y130"},
 				{id: 3,url: "https://sharefs.ali.kugou.com/202201181337/cda043c31ee42fb8ec2b40b2b1e0846a/G188/M00/02/1B/XIcBAF4dxoWAfMTLADvMuUgMSN8784.mp3",name: "这就是爱吗 - 杨胖雨",img: "http://imge.kugou.com/stdmusic/150/20200114/20200114212104670595.jpg"},
-				{id: 4,url: "https://sharefs.ali.kugou.com/202201181532/189c02490a0d5a6eca328a8c84311676/KGTX/CLTX001/d06f97d2b923f89c755e2cfceccaa69c.mp3",name: "在你的身边 - 盛哲",img: "http://imge.kugou.com/stdmusic/150/20210630/20210630181811872340.jpg"},
+				{id: 4,url: "https://music.163.com/song/media/outer/url?id=475479888.mp3",name: "在你的身边 - 盛哲",img: "http://imge.kugou.com/stdmusic/150/20210630/20210630181811872340.jpg"},
 				{id: 5,url: "http://music.163.com/song/media/outer/url?id=1365898499.mp3",name: "失眠飞行 - 接个吻，..",img: "https://p1.music.126.net/Bq6Io8lpY1l2HsQ28QKFlw==/109951164083996255.jpg?param=130y130"},
 				{id: 6,url: "https://music.163.com/song/media/outer/url?id=1406686876.mp3",name: "负重一万斤长大 - 太一",img: "https://p1.music.126.net/YVdUq-VX1TJW_8u3EKAs5g==/109951164545953099.jpg?param=130y130"},
-				{id: 7,url: "https://sharefs.ali.kugou.com/202201181610/569f6d19c29026e7cd2bf5201a3991ac/KGTX/CLTX001/7cca3e9b51ecf1117d04166d495de052.mp3",name: "八小时时差 - DJ",img: "http://imge.kugou.com/stdmusic/150/20210408/20210408152213667669.jpg"},
+				{id: 7,url: "music/八小时时差 - DJ.mp3",name: "八小时时差 - DJ",img: "http://imge.kugou.com/stdmusic/150/20210408/20210408152213667669.jpg"},
 				{id: 8,url: "https://music.163.com/song/media/outer/url?id=415792881.mp3",name: "刚刚好 - 薛之谦",img: "https://p1.music.126.net/hti_a0LADoFMBHvOBwAtRA==/1369991500930171.jpg?param=130y130"},
 				{id: 9,url: "https://music.163.com/song/media/outer/url?id=28059417.mp3",name: "他不懂 - 张杰",img: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg?param=130y130"},
 				{id: 10,url: "https://music.163.com/song/media/outer/url?id=1399533630.mp3",name: "与火星的孩子对话 - 华..",img: "https://p1.music.126.net/sY3TVSvagXidLzCOy9WVwg==/109951164881032001.jpg?param=130y130"}
@@ -532,10 +532,10 @@
 					</div>
 					<div style="position: absolute;top: 0; left: 900px; width: 600px; height: 80px;">
 						<div style="margin-left: 10px;margin-top: 7px; width: 64px;height: 64px;overflow: hidden;border-radius: 32px;box-shadow: 0 0 5px -2px;display: inline-block;">
-							<img onclick="pc_music_paused()" id="pc_work_left_music_img" style="width: 64px;height: 64px;">
+							<img onclick="pc_music_paused()" id="pc_work_left_music_img" style="width: 64px;height: 64px;" src="images/1.ico">
 						</div>
 						<div style="width: 100%;position: absolute;top: 0; left: 90px;">
-							<h2 id="pc_work_left_music_name" style="font-size: 15px;font-weight: 600;"></h2>
+							<h2 id="pc_work_left_music_name" style="font-size: 15px;font-weight: 600;">暂时没有音乐正在播放</h2>
 						</div>
 						<progress id="pc_nav_progress" max="" value="" style="width: 300px; position: absolute;top: 50px;left: 90px;height: 8px;" />
 					</div>
@@ -600,7 +600,7 @@
 						<span style="margin-left: -13px; font-size: 7px;color: #a6a6a6;">点击更改音乐哦</span>
 						<div class="pc_work_left_music_menu">
 							<h5 onclick="music_change(0)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">1</span>哪里都是你 - 队长</h5>
-							<h5 onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>明明就 - 杨雪婧</h5>
+							<h5 onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹昔..</h5>
 							<h5 onclick="music_change(2)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">3</span>这就是爱吗 - 杨胖雨</h5>
 							<h5 onclick="music_change(3)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">4</span>在你的身边 - 盛哲</h5>
 							<h5 onclick="music_change(4)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">5</span>失眠飞行 - 接个吻，..</h5>
