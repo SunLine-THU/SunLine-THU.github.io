@@ -16,159 +16,7 @@
 		<link rel="icon" href="images/1.ico"/>
 		<!-- 导入在线样式表用于i标签 -->
 		<script src="https://kit.fontawesome.com/36c979deae.js" crossorigin="anonymous"></script>
-		<style type="text/css">
-			* {
-				user-select: none;
-				cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
-			}
-			body {
-				margin: 0;
-				padding: 0;
-				transition: all .5s;
-				cursor:url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
-			}
-			ul {
-				list-style: none;
-			}
-			/* pc端 */
-			#pc_box {
-				/* height: 1900px; */
-				transition: all .5s;
-				position: relative;
-			}
-			#pc_work {
-				width: 800px;
-				height: 1900px;
-				/* border: #000000 2px solid; */
-				margin: 0 auto;
-				position: relative;
-			}
-			#pc_head_readme {
-				height: 1067px;
-				background: rgba(255,248,220,.9);
-				border-radius: 15px;
-			}
-			#pc_nav{
-				transition: all .5s;
-				height: 80px;
-				width: 100%;
-				background-color: white;
-				position: fixed;
-				box-shadow: 0 1px 20px;
-				z-index: 10;
-			}
-			#pc_nav li:hover {
-				border-bottom: #FFA500 4px solid;
-			}
-			#pc_nav_bak {
-				height: 80px;
-				width: 100%;
-			}
-			.pc_head_name {
-				font-size: 25px;
-				line-height: 40px;
-				font-weight: 600;
-				position: absolute;
-				left: 130px;
-				top: 15px;
-				color: black;
-				padding: 5px;
-				user-select: none;
-			}
-			.pc_head_name:hover {
-				color: white;
-				background-color: orange;
-				border-radius: 9px;
-			}
-			.pc_work_head {
-				height: 400px;
-				width: 100%;
-				/* border: red 2px solid; */
-				position: absolute;
-				top: 190px;
-				
-			}
-			.li_img:hover {
-				transform: scale(1.5);
-				cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/ayuda.cur),auto;
-			}
-			#pc_work_head_img:hover{
-				transform: rotate(360deg);
-			}
-			.title_1 {
-				margin: 60px auto;
-				width: 80%;
-				height: 300px;
-				border-radius: 5px;
-				box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);
-				overflow: hidden;
-				
-			}
-			.title_img {
-				transition: all .3s;
-			}
-			.title_1:hover .title_img{
-				transform: scale(1.5);
-			}
-			
-			/* h1将作为文章标题前标识符 */
-			h1 {
-				font-size: 18px;
-				color: #202020;
-				font-weight: 300;
-				border-bottom: 1px dashed #ececec;
-				border-bottom-width: 2px;
-				border-bottom-style: dashed;
-				border-bottom-color: rgb(236, 236, 236);
-			}
-			.pc_work_left_music_menu {
-				height: 290px; 
-				overflow-y: auto;
-				overflow-x: hidden;
-			}
-			.pc_work_left_music_menu::-webkit-scrollbar{
-				width: 4px;
-			}
-			.pc_work_left_music_menu::-webkit-scrollbar-thumb{
-				border-radius: 10px;
-				-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-				background: rgba(0,0,0,0.2);
-			}
-			.pc_work_left_music_menu::-webkit-scrollbar-track {
-				-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-				border-radius: 0;
-				background: rgba(0,0,0,0.1);
-			
-			}
-			h5 {
-				margin-top: 10px;
-				margin-bottom: 7px;
-				margin-left: 7px;
-				color: #3d3d3d;
-			}
-			#body::-webkit-scrollbar{
-				width: 7px;
-			}
-			#body::-webkit-scrollbar-thumb{
-				border-radius: 10px;
-				-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-				background: rgba(0,0,0,0.2);
-			}
-			#body::-webkit-scrollbar-track {
-				-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-				border-radius: 0;
-				background: rgba(0,0,0,0.1);
-			}
-			
-			
-			/* 移动端 */
-			#mobile_box {
-				border: red solid 2px;
-				width: 100%;
-				height: 1900px;
-				margin: 0 auto;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
 		<script type="text/javascript">
 			// 加载页面
 			var d = setTimeout(img,1);
@@ -209,14 +57,16 @@
 			var music = [
 				{id: 1,url: "https://music.163.com/song/media/outer/url?id=488249475.mp3",name: "哪里都是你 - 队长",img: "http://imge.kugou.com/stdmusic/150/20210207/20210207210121169377.jpg"},
 				{id: 2,url: "https://music.163.com/song/media/outer/url?id=1892562874.mp3",name: "落在生命里的光 - 尹昔..",img: "https://p1.music.126.net/UAx4r7pN-53CNbiqQ4CcXQ==/109951166589723188.jpg?param=130y130"},
-				{id: 3,url: "https://sharefs.ali.kugou.com/202201181337/cda043c31ee42fb8ec2b40b2b1e0846a/G188/M00/02/1B/XIcBAF4dxoWAfMTLADvMuUgMSN8784.mp3",name: "这就是爱吗 - 杨胖雨",img: "http://imge.kugou.com/stdmusic/150/20200114/20200114212104670595.jpg"},
+				{id: 3,url: "https://music.163.com/song/media/outer/url?id=1417120347.mp3",name: "这就是爱吗 - 杨胖雨",img: "http://imge.kugou.com/stdmusic/150/20200114/20200114212104670595.jpg"},
 				{id: 4,url: "https://music.163.com/song/media/outer/url?id=475479888.mp3",name: "在你的身边 - 盛哲",img: "http://imge.kugou.com/stdmusic/150/20210630/20210630181811872340.jpg"},
 				{id: 5,url: "http://music.163.com/song/media/outer/url?id=1365898499.mp3",name: "失眠飞行 - 接个吻，..",img: "https://p1.music.126.net/Bq6Io8lpY1l2HsQ28QKFlw==/109951164083996255.jpg?param=130y130"},
 				{id: 6,url: "https://music.163.com/song/media/outer/url?id=1406686876.mp3",name: "负重一万斤长大 - 太一",img: "https://p1.music.126.net/YVdUq-VX1TJW_8u3EKAs5g==/109951164545953099.jpg?param=130y130"},
 				{id: 7,url: "music/八小时时差 - DJ.mp3",name: "八小时时差 - DJ",img: "http://imge.kugou.com/stdmusic/150/20210408/20210408152213667669.jpg"},
 				{id: 8,url: "https://music.163.com/song/media/outer/url?id=415792881.mp3",name: "刚刚好 - 薛之谦",img: "https://p1.music.126.net/hti_a0LADoFMBHvOBwAtRA==/1369991500930171.jpg?param=130y130"},
 				{id: 9,url: "https://music.163.com/song/media/outer/url?id=28059417.mp3",name: "他不懂 - 张杰",img: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg?param=130y130"},
-				{id: 10,url: "https://music.163.com/song/media/outer/url?id=1399533630.mp3",name: "与火星的孩子对话 - 华..",img: "https://p1.music.126.net/sY3TVSvagXidLzCOy9WVwg==/109951164881032001.jpg?param=130y130"}
+				{id: 10,url: "https://music.163.com/song/media/outer/url?id=1399533630.mp3",name: "与火星的孩子对话 - 华..",img: "https://p1.music.126.net/sY3TVSvagXidLzCOy9WVwg==/109951164881032001.jpg?param=130y130"},
+				{id: 11,url: "https://music.163.com/song/media/outer/url?id=1403318151.mp3",name: "把回忆拼好给你 - 王贰..",img: "https://p1.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg?param=130y130"},
+				{id: 12,url: "https://music.163.com/song/media/outer/url?id=1894164516.mp3",name: "无人 - 匿名",img: "https://p2.music.126.net/zS99ZtacYZW9OCE3muh7eA==/109951166610479241.jpg?param=130y130"}
 				// {id: ,url: "",name: "",img: ""} 网易云：/media/outer/url
 			]
 			
@@ -368,6 +218,8 @@
 			// 暂时关闭加载页面 默认2500
 			var t = setTimeout(goon,1);
 			function goon(){
+				var pase = document.getElementById("pc_work_left_music_pase");
+				var play = document.getElementById("pc_work_left_music_play");
 				document.getElementById("body").style.background = "url(images/1.jpg) no-repeat";
 				document.getElementById("load").style.display="none";
 				setInterval(function() {
@@ -375,6 +227,9 @@
 					if (width < 800){
 						document.getElementById("pc_box").style.display= "none";
 						document.getElementById("mobile_box").style.display = "";
+						document.getElementById("music1").pause();
+						pase.style.opacity = 0;
+						play.style.opacity = 1;
 					}else {
 						document.getElementById("pc_box").style.display= "";
 						document.getElementById("mobile_box").style.display = "none";
@@ -492,6 +347,36 @@
 					return i;
 			}
 			
+			
+			
+			// 移动端
+			
+			function mobile_mask_on(){
+				var nav = document.getElementById("mobile_nav");
+				document.getElementById("mobile_mask").style.display = "";
+				
+				timeId_1 = setInterval(function () {
+				if (nav.offsetLeft >= 0) {
+					clearInterval(timeId_1);
+					nav.style.left = 0 + 'px';
+				} else {
+					nav.style.left = nav.offsetLeft + 10 + 'px';
+				}
+				}, 10);
+
+				// 禁止滚动
+				document.body.style.overflow='hidden';
+				document.addEventListener("touchmove",mo,{passive:false});
+				
+			}
+			function mobile_mask_off(){
+				document.getElementById("mobile_mask").style.display = "none";
+				var nav = document.getElementById("mobile_nav");
+				nav.style.left = "-280px";
+				// 允许滚动
+				document.body.style.overflow='';
+				document.removeEventListener("touchmove",mo,{passive:false});
+			}
 		</script>
 	</head>
 	<body id="body">
@@ -600,7 +485,7 @@
 						<span style="margin-left: -13px; font-size: 7px;color: #a6a6a6;">点击更改音乐哦</span>
 						<div class="pc_work_left_music_menu">
 							<h5 onclick="music_change(0)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">1</span>哪里都是你 - 队长</h5>
-							<h5 onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹昔..</h5>
+							<h5 onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹..</h5>
 							<h5 onclick="music_change(2)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">3</span>这就是爱吗 - 杨胖雨</h5>
 							<h5 onclick="music_change(3)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">4</span>在你的身边 - 盛哲</h5>
 							<h5 onclick="music_change(4)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">5</span>失眠飞行 - 接个吻，..</h5>
@@ -609,6 +494,8 @@
 							<h5 onclick="music_change(7)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">8</span>刚刚好 - 薛之谦</h5>
 							<h5 onclick="music_change(8)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">9</span>他不懂 - 张杰</h5>
 							<h5 onclick="music_change(9)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">10</span>与火星的孩子对话 -..</h5>
+							<h5 onclick="music_change(10)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">11</span>把回忆拼好给你 - 王..</h5>
+							<h5 onclick="music_change(11)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">12</span>无人 - 匿名</h5>
 						</div>
 					</div>
 					
@@ -618,23 +505,52 @@
 				<!-- 中间 -->
 				<div id="new_work" style="width: 70%;height: auto;position: absolute;top: 987px;left: 15%;">
 					<h1 style="margin-top: 50px;font-size: 15px; font-weight: 400;"><span style="margin-left: 10px;"><i class="far fa-clock"></i></span>&nbsp;最新文章</h1>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
+					<div class="title_1" style="position: relative;">
+						<a href="#">
+							<div style="width: 100%;height: 100%;">
+								<div style="text-decoration: none; width: 50%;height: 100%;display: inline-block;position: absolute;top: 0;z-index: 1;">
+									<!-- 标题 -->
+									<span class="title_name" style="font-size: 19px;position: absolute;left: 15px;top: 30px;font-weight: 600;color: #000000;">网站开发过程</span>
+									<!-- 时间 -->
+									<span style="font-size: 10px;position: absolute;left: 15px;top: 70px;font-weight: 300;color: #8f8f8f;"><i class="far fa-clock" style="font-size: 1px;color: black;"></i>&nbsp;&nbsp;2022-01-21</span>
+									<!-- 概述 -->
+									<div style="position: absolute;left: 15px;top: 110px;width: 80%;">
+										<span style="color: #7e7e7e;font-size: 8px;">&nbsp;&nbsp;关于本网页开发和未来发展方向,以及部分帮助文档欢迎指导</span>
+									</div>
+									<!-- 结尾 -->
+									<div style="position: absolute;left: 15px;top: 190px;width: 80%;">
+										<span style="color: #7e7e7e;font-size: 8px;">最后修改时间：15:09</span>
+									</div>
+								</div>
+								<!-- 右边图片 -->
+								<div style="width: 50%;height: 100%;display: inline-block;overflow: hidden;position: relative;left: 50%;">
+									<img class="title_img" src="images/image-404.png" style="width: 600px;height: 300px;position: absolute;left: -190px;top: 0px;" >
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
-					</div>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
-					</div>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
-					</div>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
-					</div>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
+					<div class="title_1" style="position: relative;">
+						<a href="#">
+							<div style="width: 100%;height: 100%;">
+								<div style="text-decoration: none; width: 50%;height: 100%;display: inline-block;position: absolute;top: 0;z-index: 1;">
+									<!-- 标题 -->
+									<span class="title_name" style="font-size: 19px;position: absolute;left: 15px;top: 30px;font-weight: 600;color: #000000;">网站开发过程</span>
+									<!-- 时间 -->
+									<span style="font-size: 10px;position: absolute;left: 15px;top: 70px;font-weight: 300;color: #8f8f8f;"><i class="far fa-clock" style="font-size: 1px;color: black;"></i>&nbsp;&nbsp;2022-01-21</span>
+									<!-- 概述 -->
+									<div style="position: absolute;left: 15px;top: 110px;width: 80%;">
+										<span style="color: #7e7e7e;font-size: 8px;">&nbsp;&nbsp;关于本网页开发和未来发展方向,以及部分帮助文档欢迎指导</span>
+									</div>
+									<!-- 结尾 -->
+									<div style="position: absolute;left: 15px;top: 190px;width: 80%;">
+										<span style="color: #7e7e7e;font-size: 8px;">最后修改时间：15:09</span>
+									</div>
+								</div>
+								<div style="width: 50%;height: 100%;display: inline-block;overflow: hidden;position: relative;left: 50%;">
+									<img class="title_img" src="https://w.wallhaven.cc/full/v9/wallhaven-v93y9m.png" style="width: 600px;height: 300px;position: absolute;left: -190px;top: 0px;" >
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="title_1">
 						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
@@ -704,7 +620,52 @@
 		
 		<!-- 手机端 -->
 		<div id="mobile_box">
+			<div class="mobile_head" style="width: 100%;height: 830px;">
+				<i onclick="mobile_mask_on()" class="fas fa-align-left" style="color: white;font-size: 20px;position: absolute;top: 20px;left: 20px;"></i>
+				<div style="width: 100%;height: 700px;margin: 50px auto;position: relative;">
+					<div style="width: 128px;height: 128px;margin: 160px auto; overflow: hidden;border-radius: 64px;box-shadow: 0 0 15px;">
+						<img src="images/1.ico" style="width: 128px;height: 128px;">
+					</div>
+					<div style="width: 128px;height: 128px;margin: -110px auto; ">
+						<span style="font-size: 25px;color: white;font-weight: 500;user-select: none;text-align: center;">My personal website</span>
+					</div>
+					<div style="width: 280px;height: 128px;margin: 500px auto;">
+						<span style="font-size: 15px;color: #a2a2a2;font-weight: 500;user-select: none;text-align: center;">「 曲高未必人不识，自有知音和清词 」</span>
+					</div>
+				</div>
+			</div>
+			<div style="background: url(images/wave1.png);height: 80px;"></div>
 			
+			<!-- 工作区域 -->
+			<div id="mobile_work" style="width: 100%;height: 600px; position: relative;">
+				<div id="mobile__title1">
+					<a href="#">
+						<div style="width: 65%;height: 110px;position: relative;">
+							<div style="text-decoration: none; width: 50%;height: 100%;display: inline-block;position: absolute;top: 20px;left: 10px;">
+								<!-- 标题 -->
+								<span class="title_name" style="font-size: 19px;font-weight: 600;color: #000000;">网站开发过程</span>
+								<br />
+								<br />
+								<!-- 时间 -->
+								<span style="font-size: 10px;font-weight: 300;color: #8f8f8f;"><i class="far fa-clock" style="font-size: 1px;color: black;"></i>&nbsp;&nbsp;2022-01-21</span>
+							</div>
+						</div>
+						<div style="width: 35%;height: 110px; position: absolute; right: 0;top: 0;overflow: hidden;">
+								<img class="title_img" src="https://w.wallhaven.cc/full/v9/wallhaven-v93y9m.png" style="width: 300px;height: 150px;position: absolute;left: -90px;" >
+						</div>
+					</a>
+				</div>
+				<div id="mobile__title1">
+					<img src="images/image-404.png" style="width: 300px;height: 150px;">
+				</div>
+			</div>
+			
+			<div id="mobile_mask" style="background-color: rgba(0,0,0,.3); width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 10;display: none;">
+				<div id="mobile_nav" style="height: 1000px;width: 280px;left: -280px; background-color: white; position: relative;">
+					
+				</div>
+				<div onclick="mobile_mask_off()" style="position: absolute;top: 0; left: 280px; width: 100%;height: 100%;"></div>
+			</div>
 		</div>
 	</body>
 </html>
