@@ -1,12 +1,12 @@
 			* {
 				user-select: none;
-				cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
+				/* cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto; */
 			}
 			body {
 				margin: 0;
 				padding: 0;
 				transition: all .5s;
-				cursor:url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
+				/* cursor:url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto; */
 			}
 			ul {
 				list-style: none;
@@ -71,7 +71,7 @@
 			}
 			.li_img:hover {
 				transform: scale(1.5);
-				cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/ayuda.cur),auto;
+				cursor: help;
 			}
 			#pc_work_head_img:hover{
 				transform: rotate(360deg);
@@ -139,6 +139,18 @@
 				-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
 				border-radius: 0;
 				background: rgba(0,0,0,0.1);
+			}
+			.pc_work_left_music_menu h5{
+				transition: all  .3s;
+			}
+			.pc_work_left_music_menu h5:hover{
+				transform: scale(1.15);
+			}
+			#pc_work_left_music_buttom span{
+				transition: all .3s;
+			}
+			#pc_work_left_music_buttom span:hover{
+				transform: scale(1.15);
 			}
 			
 			
