@@ -55,7 +55,7 @@
 			// 定义曲库
 			// 命名规则曲名加人名不得超过9字
 			var music = [
-				{id: 1,url: "https://music.163.com/song/media/outer/url?id=488249475.mp3",name: "哪里都是你 - 队长",img: "http://imge.kugou.com/stdmusic/150/20210207/20210207210121169377.jpg"},
+				{id: 1,url: "https://music.163.com/song/media/outer/url?id=1867217766.mp3",name: "致你 - yihuik苡慧",img: "https://p1.music.126.net/VDmN2dNpIFu4gTv4bZe6KQ==/109951166254691365.jpg?param=130y130"},
 				{id: 2,url: "https://music.163.com/song/media/outer/url?id=1892562874.mp3",name: "落在生命里的光 - 尹昔..",img: "https://p1.music.126.net/UAx4r7pN-53CNbiqQ4CcXQ==/109951166589723188.jpg?param=130y130"},
 				{id: 3,url: "https://music.163.com/song/media/outer/url?id=1417120347.mp3",name: "这就是爱吗 - 杨胖雨",img: "http://imge.kugou.com/stdmusic/150/20200114/20200114212104670595.jpg"},
 				{id: 4,url: "https://music.163.com/song/media/outer/url?id=475479888.mp3",name: "在你的身边 - 盛哲",img: "http://imge.kugou.com/stdmusic/150/20210630/20210630181811872340.jpg"},
@@ -66,7 +66,8 @@
 				{id: 9,url: "https://music.163.com/song/media/outer/url?id=28059417.mp3",name: "他不懂 - 张杰",img: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg?param=130y130"},
 				{id: 10,url: "https://music.163.com/song/media/outer/url?id=1399533630.mp3",name: "与火星的孩子对话 - 华..",img: "https://p1.music.126.net/sY3TVSvagXidLzCOy9WVwg==/109951164881032001.jpg?param=130y130"},
 				{id: 11,url: "https://music.163.com/song/media/outer/url?id=1403318151.mp3",name: "把回忆拼好给你 - 王贰..",img: "https://p1.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg?param=130y130"},
-				{id: 12,url: "https://music.163.com/song/media/outer/url?id=1894164516.mp3",name: "无人 - 匿名",img: "https://p2.music.126.net/zS99ZtacYZW9OCE3muh7eA==/109951166610479241.jpg?param=130y130"}
+				{id: 12,url: "https://music.163.com/song/media/outer/url?id=1894164516.mp3",name: "无人 - 匿名",img: "https://p2.music.126.net/zS99ZtacYZW9OCE3muh7eA==/109951166610479241.jpg?param=130y130"},
+				{id: 13,url: "https://music.163.com/song/media/outer/url?id=488249475.mp3",name: "哪里都是你 - 队长",img: "http://imge.kugou.com/stdmusic/150/20210207/20210207210121169377.jpg"}
 				// {id: ,url: "",name: "",img: ""} 网易云：/media/outer/url
 			]
 			
@@ -216,7 +217,7 @@
 			
 			
 			// 暂时关闭加载页面 默认2500
-			var t = setTimeout(goon,1);
+			var t = setTimeout(goon,2500);
 			function goon(){
 				var pase = document.getElementById("pc_work_left_music_pase");
 				var play = document.getElementById("pc_work_left_music_play");
@@ -484,7 +485,7 @@
 						<span style="color: #000000; margin: 15px; height: 40px;line-height: 40px;font-weight: 800;">曲目</span>
 						<span style="margin-left: -13px; font-size: 7px;color: #a6a6a6;">点击更改音乐哦</span>
 						<div class="pc_work_left_music_menu">
-							<h5 onclick="music_change(0)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">1</span>哪里都是你 - 队长</h5>
+							<h5 onclick="music_change(0)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">1</span>致你 - yihuik苡慧</h5>
 							<h5 onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹..</h5>
 							<h5 onclick="music_change(2)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">3</span>这就是爱吗 - 杨胖雨</h5>
 							<h5 onclick="music_change(3)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">4</span>在你的身边 - 盛哲</h5>
@@ -496,6 +497,7 @@
 							<h5 onclick="music_change(9)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">10</span>与火星的孩子对话 -..</h5>
 							<h5 onclick="music_change(10)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">11</span>把回忆拼好给你 - 王..</h5>
 							<h5 onclick="music_change(11)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">12</span>无人 - 匿名</h5>
+							<h5 onclick="music_change(12)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">13</span>哪里都是你 - 队长</h5>
 						</div>
 					</div>
 					
