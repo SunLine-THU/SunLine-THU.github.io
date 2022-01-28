@@ -11,11 +11,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" type="text/css" href="../index.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="typora_title_help.css"/> -->
+		
 		<title>暖阳THU StudySpace</title>
-		<link rel="icon" href="images/1.ico"/>
+		<link rel="icon" href="../images/1.ico"/>
 		<!-- 导入在线样式表用于i标签 -->
 		<script src="https://kit.fontawesome.com/36c979deae.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
 		<script type="text/javascript">
 			// 加载页面
 			var d = setTimeout(img,1);
@@ -34,7 +37,7 @@
 				document.getElementById("pc_box").style.display= "none";
 				document.getElementById("mobile_box").style.display = "none";
 				document.getElementById("pc_back_bug_mask").style.display = "none";
-				setTimeout(music_auto_play,3000);
+				// setTimeout(music_auto_play,3000);
 				setTimeout(progress,3000);
 				console.log("%c路有多远，\n只有心知道，\n最美的旅程，\n是不断的经历，\n坚持走下去．\n我是开发者暖阳THU,\n与您同行！", "line-height:22px;color:#00a5f2");
 				document.getElementById('gif').src = document.getElementById('gif').src
@@ -216,11 +219,10 @@
 			
 			
 			// 暂时关闭加载页面 默认2500
-			var t = setTimeout(goon,2500);
+			var t = setTimeout(goon,1);
 			function goon(){
 				var pase = document.getElementById("pc_work_left_music_pase");
 				var play = document.getElementById("pc_work_left_music_play");
-				document.getElementById("body").style.background = "url(images/1.jpg) no-repeat";
 				document.getElementById("load").style.display="none";
 				setInterval(function() {
 					var width = window.screen.width;
@@ -240,7 +242,7 @@
 			// nav
 			var ls = setTimeout(covernav,1);
 			function covernav() {
-				document.getElementById("pc_goto_top").style.display = "none";
+				// document.getElementById("pc_goto_top").style.display = "none";
 				document.getElementById("pc_nav").style.display = "none";
 			}
 			window.onscroll = function() {
@@ -252,10 +254,10 @@
 					document.getElementById("pc_nav").style.display = "none";
 				}
 				if (navtop >= 600){
-					document.getElementById("pc_goto_top").style.display = "";
+					// document.getElementById("pc_goto_top").style.display = "";
 					document.getElementById("pc_left_bottom_time").style.opacity = 1;
 				}else{
-					document.getElementById("pc_goto_top").style.display = "none";
+					// document.getElementById("pc_goto_top").style.display = "none";
 					document.getElementById("pc_left_bottom_time").style.opacity = 0;
 				}
 			}
@@ -382,37 +384,37 @@
 			}
 		</script>
 	</head>
-	<body id="body">
+	<body id="body" >
 		<audio id="music1">
 			当前浏览器不支持audio
 		</audio>
 		<!-- 加载页面 -->
 		<div id="load" style="width: 300px; margin: 150px auto;">
-			<img id="gif" src="images/loading.gif" style="width: 350px;height: 250px;">
+			<img id="gif" src="../images/loading.gif" style="width: 350px;height: 250px;">
 		</div>
 		
 		<!-- 电脑端 -->
 		<div id="pc_box">
 			<div id="pc_head_title">
 				<div id="pc_nav">
-					<img src="images/1.ico" style="position: absolute;left: 25px;top: 9px;user-select: none;" >
+					<img src="../images/1.ico" style="position: absolute;left: 25px;top: 9px;user-select: none;" >
 					<span class="pc_head_name">暖阳THU</span>
 					<ul>
-						<li id="pc_nav_li_1" style="position: absolute;left: 280px;"><a href="#" style="text-decoration: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">首页</span></a></li>
+						<li id="pc_nav_li_1" style="position: absolute;left: 280px;"><a href="index.html" style="text-decoration: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">首页</span></a></li>
 						<li id="pc_nav_li_2" onmouseover="pc_nav_li_2()" style="position: absolute;left: 355px;"><a style="text-decoration: none;user-select: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">友情链接</span></a></li>
 						<li id="pc_nav_li_3" onmouseover="pc_nav_li_3()" style="position: absolute;left: 460px;"><a style="text-decoration: none;user-select: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">开发日志</span></a></li>
 						<li id="pc_nav_li_4" style="position: absolute;left: 575px;"><a style="text-decoration: none;user-select: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">文档系统</span></a></li>
 					</ul>
 					<div id="pc_nav_yqlj" onmouseleave="pc_nav_yqlj_off()" style="transition: all .5s; background-color: white; width: 135px;height: 250px;position: absolute;top:65px;left: 320px;border-radius: 5px; box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);">
 						<ul style="user-select: none;">
-							<li title="首页" style="width: 32px;position: absolute;top: 40px;left: 50px;"><a href="#"><img class="li_img" src="images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-							<li title="bilibili" style="width: 32px;position: absolute;top: 102px; left: 50px;"><a href="https://space.bilibili.com/182358060" target="_blank"><img class="li_img" src="images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-							<li title="GitHub" style="width: 32px;position: absolute;top: 174px; left: 50px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="首页" style="width: 32px;position: absolute;top: 40px;left: 50px;"><a href="index.html"><img class="li_img" src="../images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="bilibili" style="width: 32px;position: absolute;top: 102px; left: 50px;"><a href="https://space.bilibili.com/182358060" target="_blank"><img class="li_img" src="../images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="GitHub" style="width: 32px;position: absolute;top: 174px; left: 50px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="../images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
 						</ul>
 					</div>
 					<div id="pc_nav_kfrz" onmouseleave="pc_nav_kfrz_off()" style="transition: all .5s; background-color: white; width: 135px;height: 250px;position: absolute;top:65px;left: 435px;border-radius: 5px; box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%); overflow: hidden;">
 							<div style="position: absolute; top: 30px;">
-								<img src="images/red.jpg" width="100px" style="transform: scale(1.5); position: absolute; left: 20px;">
+								<img src="../images/red.jpg" width="100px" style="transform: scale(1.5); position: absolute; left: 20px;">
 							</div>
 							<div>
 								<span style="color: #919191; margin-left: 10px; height: 40px;line-height: 25px;font-size: 15px; position: absolute; top: 110px;">&nbsp;&nbsp;目前系统还在开发中,并不是稳定版本,还希望大家积极反馈bug</span>
@@ -420,7 +422,7 @@
 					</div>
 					<div style="position: absolute;top: 0; left: 900px; width: 600px; height: 80px;">
 						<div style="margin-left: 10px;margin-top: 7px; width: 64px;height: 64px;overflow: hidden;border-radius: 32px;box-shadow: 0 0 5px -2px;display: inline-block;">
-							<img onclick="pc_music_paused()" id="pc_work_left_music_img" style="width: 64px;height: 64px;" src="images/1.ico">
+							<img onclick="pc_music_paused()" id="pc_work_left_music_img" style="width: 64px;height: 64px;" src="../images/1.ico">
 						</div>
 						<div style="width: 100%;position: absolute;top: 0; left: 90px;">
 							<h2 id="pc_work_left_music_name" style="font-size: 15px;font-weight: 600;">暂时没有音乐正在播放</h2>
@@ -433,29 +435,15 @@
 				<span class="pc_head_name">暖阳THU</span>
 			</div>
 			<div id="pc_work">
-				<div class="pc_work_head">
-					<div id="pc_work_head_img" style="width: 128px;height: 128px;position: absolute;left: 336px;border-radius: 64px;overflow: hidden; border: rgba(0, 0, 0, 0.1) 4px solid; box-shadow: 0 0 10px;transition: all .7s;">
-						<img src="images/1.ico" style="width: 128px;height: 128px;user-select: none;" >
-					</div>
-					<div id="pc_work_head_readme" style="width: 600px;height: 200px;background-color: rgba(0, 0, 0, 0.2);position: absolute;top: 150px; left: 100px; box-shadow: 0 0 50px;border-radius: 9px;">
-						<span style="font-size: 25px;color: white;font-weight: 500;position: absolute; left: 190px;top: 30px;user-select: none;">My personal website</span>
-						<ul style="user-select: none;">
-							<li title="首页" style="width: 32px;position: absolute;top: 110px;"><a href="#"><img class="li_img" src="images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-							<li title="bilibili" style="width: 32px;position: absolute;top: 110px; left: 150px;"><a href="https://space.bilibili.com/182358060" target="_blank"><img class="li_img" src="images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-							<li title="GitHub" style="width: 32px;position: absolute;top: 110px; left: 260px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-						</ul>
-					</div>
-				</div>
-				
 				<!-- 工作区域 -->
 				<!-- 左边 -->
-				<div id="new_work_left" style="width: 25%;height: 910px;position: absolute;top: 987px;left: -10%;">
+				<div id="new_work_left" style="width: 25%;height: 910px;position: absolute;top: 70px;left: -25%;">
 					<div id="pc_workd_left_mytip" style="width: 80%;height: 345px;margin: 10px auto;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #c4c4c4;">
 						<div class="pc_workd_left_mytip_img" style="box-shadow: ;">
-							<img src="images/pc_work_left_mytip_img.png" width="100%" height="90px">
+							<img src="../images/pc_work_left_mytip_img.png" width="100%" height="90px">
 						</div>
 						<div style="border-radius: 32px; overflow: hidden;width: 48px;height: 48px;position: absolute;top: 80px;left: 70px;border: rgba(0, 0, 0, 0.1) 2px solid; box-shadow: 0 0 3px;">
-							<img src="images/1.ico" width="48px" height="48px">
+							<img src="../images/1.ico" width="48px" height="48px">
 						</div>
 						<div style="width: 155px; height: 200px; position: absolute;top: 100px;border-radius: 5px;">
 							<span style="position: absolute; top: 35px;left: 30px;font-size: 15px;font-weight: 600;">_暖暖的太阳_</span>
@@ -488,7 +476,7 @@
 						<span style="margin-left: -13px; font-size: 7px;color: #a6a6a6;">点击更改音乐哦</span>
 						<div class="pc_work_left_music_menu">
 							<h5 onclick="music_change(0)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">1</span>致你 - yihuik苡慧</h5>
-							<h5 onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹..</h5>
+							<h5  onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹..</h5>
 							<h5 onclick="music_change(2)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">3</span>这就是爱吗 - 杨胖雨</h5>
 							<h5 onclick="music_change(3)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">4</span>在你的身边 - 盛哲</h5>
 							<h5 onclick="music_change(4)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">5</span>失眠飞行 - 接个吻，..</h5>
@@ -507,57 +495,18 @@
 				
 				
 				<!-- 中间 -->
-				<div id="new_work" style="width: 70%;height: auto;position: absolute;top: 987px;left: 15%;">
-					<h1 style="margin-top: 50px;font-size: 15px; font-weight: 400;"><span style="margin-left: 10px;"><i class="far fa-clock"></i></span>&nbsp;最新文章</h1>
-					<div class="title_1" style="position: relative;">
-						<a href="athor/wzkfrz.html">
-							<div style="width: 100%;height: 100%;">
-								<div style="text-decoration: none; width: 50%;height: 100%;display: inline-block;position: absolute;top: 0;z-index: 1;">
-									<!-- 标题 -->
-									<span class="title_name" style="font-size: 19px;position: absolute;left: 15px;top: 30px;font-weight: 600;color: #000000;">网站开发过程</span>
-									<!-- 时间 -->
-									<span style="font-size: 10px;position: absolute;left: 15px;top: 70px;font-weight: 300;color: #8f8f8f;"><i class="far fa-clock" style="font-size: 1px;color: black;"></i>&nbsp;&nbsp;2022-01-21</span>
-									<!-- 概述 -->
-									<div style="position: absolute;left: 15px;top: 110px;width: 80%;">
-										<span style="color: #7e7e7e;font-size: 8px;">&nbsp;&nbsp;关于本网页开发和未来发展方向,以及部分帮助文档欢迎指导</span>
-									</div>
-									<!-- 结尾 -->
-									<div style="position: absolute;left: 15px;top: 190px;width: 80%;">
-										<span style="color: #7e7e7e;font-size: 8px;">最后修改时间：15:09</span>
-									</div>
-								</div>
-								<div style="width: 50%;height: 100%;display: inline-block;overflow: hidden;position: relative;left: 50%;">
-									<img class="title_img" src="https://w.wallhaven.cc/full/y8/wallhaven-y8vvex.jpg" style="width: 300px;height: 600px;position: absolute;left: 0px;top: -60px;" >
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="title_1" style="position: relative;">
-						<a href="#">
-							<div style="width: 100%;height: 100%;">
-								<div style="text-decoration: none; width: 50%;height: 100%;display: inline-block;position: absolute;top: 0;z-index: 1;">
-									<!-- 标题 -->
-									<span class="title_name" style="font-size: 19px;position: absolute;left: 15px;top: 30px;font-weight: 600;color: #000000;">闲游日记</span>
-									<!-- 时间 -->
-									<span style="font-size: 10px;position: absolute;left: 15px;top: 70px;font-weight: 300;color: #8f8f8f;"><i class="far fa-clock" style="font-size: 1px;color: black;"></i>&nbsp;&nbsp;2022-01-23</span>
-									<!-- 概述 -->
-									<div style="position: absolute;left: 15px;top: 110px;width: 80%;">
-										<span style="color: #7e7e7e;font-size: 8px;">&nbsp;&nbsp;就真的只是一篇风景分享，拍照技巧的探讨</span>
-									</div>
-									<!-- 结尾 -->
-									<div style="position: absolute;left: 15px;top: 190px;width: 80%;">
-										<span style="color: #7e7e7e;font-size: 8px;">最后修改时间：17:29</span>
-									</div>
-								</div>
-								<!-- 右边图片 -->
-								<div style="width: 50%;height: 100%;display: inline-block;overflow: hidden;position: relative;left: 50%;">
-									<img class="title_img" src="https://w.wallhaven.cc/full/z8/wallhaven-z89dgo.png" style="width: 600px;height: 300px;position: absolute;left: -170px;top: 0px;" >
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="title_1">
-						<img class="title_img" src="images/image-404.png" style="width: 470px;height: 300px; float: right;" >
+				<div id="new_work" style="width: 100%;height: auto;position: absolute;top: 90px; box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);">
+					<div style="height: auto;position: relative;">
+						<!-- 标题 -->
+						<!-- <div style="width: 100%;height: 30px;">
+							<h3 style="line-height: 30px;position: absolute;left: 15px;">网站开发过程</h3>
+						</div> -->
+						<div style="width: 100%;height: auto;">
+							<!-- 引入html -->
+							<object style="border:0px;" type="text/x-scriptlet" data="content/wzkfrz_neirong.html" width="100%" height="4500px">
+								<iframe src="content/wzkfrz_neirong.html" width="100%" height="4500px" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+							</object>
+						</div>
 					</div>
 				</div>
 				
@@ -565,7 +514,7 @@
 				
 				
 				<!-- 右边 -->
-				<div id="new_work_right" style="width: 25%;height: 910px;position: absolute;top: 987px;left: 85%;">
+				<div id="new_work_right" style="width: 25%;height: 910px;position: absolute;top: 70px;left: 100%;">
 					<div id="pc_workd_right_mytip" style="width: 80%;height: 180px;margin: 10px auto;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #333333;">
 						<span style="color: #000000; margin: 15px; height: 40px;line-height: 40px;">公告栏</span>
 						<br />
@@ -581,18 +530,13 @@
 						</div>
 					</div>
 				</div>
-				
-				
 			</div>
-			<div class="pc_work_head_end" style="height: 217px;width: 100%; position: absolute;top: 983px;z-index: 9;">
-				<div style="background: url(images/wave1.png);background-repeat: repeat-x;height: 217px;"></div>
-			</div>
-			<div id="pc_goto_top" style="background: whitesmoke; width: 40px;height: 40px;position: fixed;right: 40px;bottom: 50px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
+			<!-- <div id="pc_goto_top" style="background: whitesmoke; width: 40px;height: 40px;position: fixed;right: 40px;bottom: 50px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
 				<span style="user-select: none;" onclick="pc_goto_top()">回到顶部</span>
-			</div>
+			</div> -->
 			<div id="pc_goto_top_tip" style="background: #fde2e2; width: 400px;height: 40px;position: fixed;top: 10px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
 				<div style="width: 32px;height: 32px;display: inline-block;padding-top: 3px;padding-left: 3px; padding-right: 100px;float: left;">
-					<img src="images/1.ico" style="width: 32px;height: 32px;">
+					<img src="../images/1.ico" style="width: 32px;height: 32px;">
 				</div>
 				<span id="pc_goto_top_tip_title" style="user-select: none;text-align: center;color: #F56C6C;font-size: 14px;font-weight: 600;line-height: 40px;">已回到顶部</span>
 			</div>
@@ -608,9 +552,9 @@
 						<span style="text-align: center;color: black;font-size: 15px; font-weight: 600;">你可以尝试以下几种方式联系</span>
 					</div>
 					<ul style="user-select: none;">
-						<li title="邮箱" style="width: 25px;position: absolute;top: 110px;"><a href="mailto:1182450661@qq.com?subject=bug反馈&body=关于网站的bug"><img class="li_img" src="images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-						<li title="私信" style="width: 25px;position: absolute;top: 110px; left: 130px;"><a href="https://message.bilibili.com/#/whisper/mid182358060" target="_blank"><img class="li_img" src="images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
-						<li title="GitHub" style="width: 25px;position: absolute;top: 110px; left: 220px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						<li title="邮箱" style="width: 25px;position: absolute;top: 110px;"><a href="mailto:1182450661@qq.com?subject=bug反馈&body=关于网站的bug"><img class="li_img" src="../images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						<li title="私信" style="width: 25px;position: absolute;top: 110px; left: 130px;"><a href="https://message.bilibili.com/#/whisper/mid182358060" target="_blank"><img class="li_img" src="../images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						<li title="GitHub" style="width: 25px;position: absolute;top: 110px; left: 220px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="../images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
 					</ul>
 					<div style="width: 70%;position: absolute;top: 190px;left: 30px;">
 						<span style="text-align: center;color: black;font-size: 15px; font-weight: 600;">如果以上方法无回应</span>
@@ -624,43 +568,17 @@
 		
 		<!-- 手机端 -->
 		<div id="mobile_box">
-			<div class="mobile_head" style="width: 100%;height: 830px;">
-				<i onclick="mobile_mask_on()" class="fas fa-align-left" style="color: white;font-size: 20px;position: absolute;top: 20px;left: 20px;"></i>
-				<div style="width: 100%;height: 700px;margin: 50px auto;position: relative;">
-					<div style="width: 128px;height: 128px;margin: 160px auto; overflow: hidden;border-radius: 64px;box-shadow: 0 0 15px;">
-						<img src="images/1.ico" style="width: 128px;height: 128px;">
-					</div>
-					<div style="width: 128px;height: 128px;margin: -110px auto; ">
-						<span style="font-size: 25px;color: white;font-weight: 500;user-select: none;text-align: center;">My personal website</span>
-					</div>
-					<div style="width: 280px;height: 128px;margin: 500px auto;">
-						<span style="font-size: 15px;color: #a2a2a2;font-weight: 500;user-select: none;text-align: center;">「 曲高未必人不识，自有知音和清词 」</span>
-					</div>
-				</div>
+			<div style="width: 100%;height: 50px;">
+				<i onclick="mobile_mask_on()" class="fas fa-align-left" style="color: black;font-size: 20px;position: absolute;top: 20px;left: 20px;"></i>
 			</div>
-			<div style="background: url(images/wave1.png);height: 80px;"></div>
 			
 			<!-- 工作区域 -->
-			<div id="mobile_work" style="width: 100%;height: 600px; position: relative;">
-				<div id="mobile__title1">
-					<a href="athor/wzkfrz.html">
-						<div style="width: 65%;height: 110px;position: relative;">
-							<div style="text-decoration: none; width: 50%;height: 100%;display: inline-block;position: absolute;top: 20px;left: 10px;">
-								<!-- 标题 -->
-								<span class="title_name" style="font-size: 19px;font-weight: 600;color: #000000;">网站开发过程</span>
-								<br />
-								<br />
-								<!-- 时间 -->
-								<span style="font-size: 10px;font-weight: 300;color: #8f8f8f;"><i class="far fa-clock" style="font-size: 1px;color: black;"></i>&nbsp;&nbsp;2022-01-21</span>
-							</div>
-						</div>
-						<div style="width: 35%;height: 110px; position: absolute; right: 0;top: 0;overflow: hidden;">
-								<img class="title_img" src="https://w.wallhaven.cc/full/v9/wallhaven-v93y9m.png" style="width: 300px;height: 150px;position: absolute;left: -90px;" >
-						</div>
-					</a>
-				</div>
-				<div id="mobile__title1">
-					<img src="images/image-404.png" style="width: 300px;height: 150px;">
+			<div id="mobile_work" style="width: 100%;height: auto; position: relative;">
+				<div style="width: 100%;height: auto;">
+					<!-- 引入html -->
+					<object style="border:0px;" type="text/x-scriptlet" data="wzkfrz_neirong.html" width="100%" height="4500px">
+						<iframe src="wzkfrz_neirong.html" width="100%" height="4500px" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+					</object>
 				</div>
 			</div>
 			
@@ -668,7 +586,7 @@
 				<!-- 导航栏 -->
 				<div id="mobile_nav" style="height: 1000px;width: 280px;left: -280px; background-color: white; position: relative;">
 					<div style="width: 100%;height: 110px;">
-						<img src="images/1.ico" style="width: 64px;height: 64px;position: absolute;top: 30px; left: 15px;" >
+						<img src="../images/1.ico" style="width: 64px;height: 64px;position: absolute;top: 30px; left: 15px;" >
 						<span class="mobile_head_name">暖阳THU</span>
 						<span style="position: absolute;left: 105px;top: 65px;font-size: 15px;font-weight: 500;">惜时 共勉</span>
 					</div>
@@ -678,7 +596,7 @@
 					</div>
 					<div style="width: 100%;height: 500px;position: relative;">
 						<ul>
-							<a href="#"><li style="font-size: 18px;font-weight: 800;position: absolute;top: -10px;left: 15px; color: #000000;">首页</li></a>
+							<a href="index.html"><li style="font-size: 18px;font-weight: 800;position: absolute;top: -10px;left: 15px; color: #000000;">首页</li></a>
 							<div style=" height: 100px;position: absolute;top: 40px;left: 15px; width: 180px;">
 								<details style="font-size: 18px;font-weight: 800;color: #000000;">
 									<summary>友情链接</summary>
