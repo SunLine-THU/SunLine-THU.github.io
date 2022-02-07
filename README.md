@@ -1,2 +1,4 @@
-# SunLine-THU.github.io
-web
+# 这是关于我的网页的GitHub项目
+项目地址：www.sunline.cf
+目前仅供个人博客使用，无任何商业用途
+欢迎各位来参观指导学习
