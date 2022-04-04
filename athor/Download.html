@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" type="text/css" href="../index.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="typora_title_help.css"/> -->
+		
+		<title>暖阳THU StudySpace</title>
+		<link rel="icon" href="../images/1.ico"/>
+		<!-- 导入在线样式表用于i标签 -->
+		<script src="https://kit.fontawesome.com/36c979deae.js" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			// 加载页面
+			var d = setTimeout(img,1);
+			function img(){
+				setInterval(function() {
+					var width = window.screen.width;
+				},100)
+			}
+			var s = setTimeout(load,100);
+			function load(){
+				document.getElementById("pc_nav_yqlj").style.display= "none";
+				document.getElementById("pc_nav_kfrz").style.display= "none";
+				document.getElementById("pc_nav_yqlj").style.opacity= "0";
+				document.getElementById("pc_nav_kfrz").style.opacity= "0";
+				document.getElementById("pc_goto_top_tip").style.display= "none";
+				document.getElementById("pc_box").style.display= "none";
+				document.getElementById("mobile_box").style.display = "none";
+				document.getElementById("pc_back_bug_mask").style.display = "none";
+				// setTimeout(music_auto_play,3000);
+				setTimeout(progress,3000);
+				console.log("%c路有多远，\n只有心知道，\n最美的旅程，\n是不断的经历，\n坚持走下去．\n我是开发者暖阳THU,\n与您同行！", "line-height:22px;color:#00a5f2");
+				document.getElementById('gif').src = document.getElementById('gif').src
+			}
+			
+			function progress(){
+				setInterval(function (){
+					var audio = document.getElementById("music1");
+					var total = audio.duration;//获取总播放时间
+					var now = audio.currentTime;//获取播放进度
+					document.getElementById("pc_nav_progress").value = now;
+					document.getElementById("pc_nav_progress").max = total;
+				},100)
+			}
+			
+			
+			// 定义曲库
+			// 命名规则曲名加人名不得超过9字
+			var music = [
+				{id: 1,url: "https://music.163.com/song/media/outer/url?id=1867217766.mp3",name: "致你 - yihuik苡慧",img: "https://p1.music.126.net/VDmN2dNpIFu4gTv4bZe6KQ==/109951166254691365.jpg?param=130y130"},
+				{id: 2,url: "https://music.163.com/song/media/outer/url?id=1892562874.mp3",name: "落在生命里的光 - 尹昔..",img: "https://p1.music.126.net/UAx4r7pN-53CNbiqQ4CcXQ==/109951166589723188.jpg?param=130y130"},
+				{id: 3,url: "https://music.163.com/song/media/outer/url?id=1417120347.mp3",name: "这就是爱吗 - 杨胖雨",img: "http://imge.kugou.com/stdmusic/150/20200114/20200114212104670595.jpg"},
+				{id: 4,url: "https://music.163.com/song/media/outer/url?id=475479888.mp3",name: "在你的身边 - 盛哲",img: "http://imge.kugou.com/stdmusic/150/20210630/20210630181811872340.jpg"},
+				{id: 5,url: "http://music.163.com/song/media/outer/url?id=1365898499.mp3",name: "失眠飞行 - 接个吻，..",img: "https://p1.music.126.net/Bq6Io8lpY1l2HsQ28QKFlw==/109951164083996255.jpg?param=130y130"},
+				{id: 6,url: "https://music.163.com/song/media/outer/url?id=1406686876.mp3",name: "负重一万斤长大 - 太一",img: "https://p1.music.126.net/YVdUq-VX1TJW_8u3EKAs5g==/109951164545953099.jpg?param=130y130"},
+				{id: 7,url: "music/八小时时差 - DJ.mp3",name: "八小时时差 - DJ",img: "http://imge.kugou.com/stdmusic/150/20210408/20210408152213667669.jpg"},
+				{id: 8,url: "https://music.163.com/song/media/outer/url?id=415792881.mp3",name: "刚刚好 - 薛之谦",img: "https://p1.music.126.net/hti_a0LADoFMBHvOBwAtRA==/1369991500930171.jpg?param=130y130"},
+				{id: 9,url: "https://music.163.com/song/media/outer/url?id=28059417.mp3",name: "他不懂 - 张杰",img: "https://p1.music.126.net/mW53BkMgGy37I7yVrUg-aQ==/109951163117902077.jpg?param=130y130"},
+				{id: 10,url: "https://music.163.com/song/media/outer/url?id=1399533630.mp3",name: "与火星的孩子对话 - 华..",img: "https://p1.music.126.net/sY3TVSvagXidLzCOy9WVwg==/109951164881032001.jpg?param=130y130"},
+				{id: 11,url: "https://music.163.com/song/media/outer/url?id=1403318151.mp3",name: "把回忆拼好给你 - 王贰..",img: "https://p1.music.126.net/CBx2K_jEN3SNWwYztagPPw==/109951164485969446.jpg?param=130y130"},
+				{id: 12,url: "https://music.163.com/song/media/outer/url?id=1894164516.mp3",name: "无人 - 匿名",img: "https://p2.music.126.net/zS99ZtacYZW9OCE3muh7eA==/109951166610479241.jpg?param=130y130"},
+				{id: 13,url: "https://music.163.com/song/media/outer/url?id=488249475.mp3",name: "哪里都是你 - 队长",img: "http://imge.kugou.com/stdmusic/150/20210207/20210207210121169377.jpg"}
+				// {id: ,url: "",name: "",img: ""} 网易云：/media/outer/url
+			]
+			
+			// 音乐播放
+			function music_auto_play(){
+				var currentMusic = 0;
+				var oVideo1 = document.getElementById("music1");
+				var oVideo1_img = document.getElementById("pc_work_left_music_img");
+				var oVideo1_name = document.getElementById("pc_work_left_music_name");
+				var oVideo1_img_1 = document.getElementById("pc_work_left_music_img_1");
+				var oVideo1_name_1 = document.getElementById("pc_work_left_music_name_1");
+				oVideo1.src = music[0].url;
+				oVideo1_img.src = music[0].img;
+				oVideo1_name.innerHTML = music[0].name;
+				oVideo1_img_1.src = music[0].img;
+				oVideo1_name_1.innerHTML = music[0].name;
+				oVideo1.play();
+				document.getElementById("pc_work_left_music_pase").style.opacity = 1;
+				document.getElementById("pc_work_left_music_play").style.opacity = 0;
+				oVideo1.onended = function() {
+					for (var i = 0; i < music.length; i++){
+						if (oVideo1.src == music[i].url){
+							currentMusic = i;
+						}
+					}
+					currentMusic += 1;
+					// 判断是否是最后一首
+					if(currentMusic === music.length) {
+						currentMusic = 0;
+					}
+					var sr = music[currentMusic].url;
+					var sr_img = music[currentMusic].img;
+					var sr_name = music[currentMusic].name;
+					var sr_img_1 = music[currentMusic].img;
+					var sr_name_1 = music[currentMusic].name;
+					oVideo1.src=sr;
+					oVideo1_img.src = sr_img;
+					oVideo1_name.innerHTML = sr_name;
+					oVideo1_img_1.src = sr_img;
+					oVideo1_name_1.innerHTML = sr_name;
+					oVideo1.play();
+					document.getElementById("pc_work_left_music_pase").style.opacity = 1;
+					document.getElementById("pc_work_left_music_play").style.opacity = 0;
+				}
+			}
+			function pc_music_next() {
+				var oVideo1 = document.getElementById("music1");
+				var oVideo1_img = document.getElementById("pc_work_left_music_img");
+				var oVideo1_name = document.getElementById("pc_work_left_music_name");
+				var oVideo1_img_1 = document.getElementById("pc_work_left_music_img_1");
+				var oVideo1_name_1 = document.getElementById("pc_work_left_music_name_1");
+				var currentMusic = 0;
+				var audio = document.getElementById("music1");
+				for (var i = 0; i < music.length; i++){
+					if (audio.src == music[i].url){
+						currentMusic = i;
+					}
+				}
+				currentMusic += 1;
+				// 判断是否是最后一首
+				if(currentMusic === music.length) {
+					currentMusic = 0;
+				}
+				var sr = music[currentMusic].url;
+				var sr_img = music[currentMusic].img;
+				var sr_name = music[currentMusic].name;
+				var sr_img_1 = music[currentMusic].img;
+				var sr_name_1 = music[currentMusic].name;
+				oVideo1.src=sr;
+				oVideo1_img.src = sr_img;
+				oVideo1_name.innerHTML = sr_name;
+				oVideo1_img_1.src = sr_img;
+				oVideo1_name_1.innerHTML = sr_name;
+				oVideo1.play();
+				document.getElementById("pc_work_left_music_pase").style.opacity = 1;
+				document.getElementById("pc_work_left_music_play").style.opacity = 0;
+			}
+			
+			function pc_music_last() {
+				var oVideo1 = document.getElementById("music1");
+				var oVideo1_img = document.getElementById("pc_work_left_music_img");
+				var oVideo1_name = document.getElementById("pc_work_left_music_name");
+				var oVideo1_img_1 = document.getElementById("pc_work_left_music_img_1");
+				var oVideo1_name_1 = document.getElementById("pc_work_left_music_name_1");
+				var currentMusic = 0;
+				var audio = document.getElementById("music1");
+				for (var i = 0; i < music.length; i++){
+					if (audio.src == music[i].url){
+						currentMusic = i;
+					}
+				}
+				currentMusic -= 1;
+				// 判断是否是第一首
+				if(currentMusic == -1) {
+					currentMusic = music.length - 1;
+				}
+				var sr = music[currentMusic].url;
+				var sr_img = music[currentMusic].img;
+				var sr_name = music[currentMusic].name;
+				var sr_img_1 = music[currentMusic].img;
+				var sr_name_1 = music[currentMusic].name;
+				oVideo1.src=sr;
+				oVideo1_img.src = sr_img;
+				oVideo1_name.innerHTML = sr_name;
+				oVideo1_img_1.src = sr_img;
+				oVideo1_name_1.innerHTML = sr_name;
+				oVideo1.play();
+				document.getElementById("pc_work_left_music_pase").style.opacity = 1;
+				document.getElementById("pc_work_left_music_play").style.opacity = 0;
+			}
+			
+			function pc_music_paused() {
+				var music = document.getElementById("music1");
+				var pase = document.getElementById("pc_work_left_music_pase");
+				var play = document.getElementById("pc_work_left_music_play");
+				var oVideo1_img = document.getElementById("pc_work_left_music_img");
+				if (music.paused){
+					music.play();
+					pase.style.opacity = 1;
+					play.style.opacity = 0;
+				}else {
+					music.pause();
+					pase.style.opacity = 0;
+					play.style.opacity = 1;
+				}
+			}
+			function music_change(indx){
+				var oVideo1 = document.getElementById("music1");
+				var oVideo1_img = document.getElementById("pc_work_left_music_img");
+				var oVideo1_name = document.getElementById("pc_work_left_music_name");
+				var oVideo1_img_1 = document.getElementById("pc_work_left_music_img_1");
+				var oVideo1_name_1 = document.getElementById("pc_work_left_music_name_1");
+				var sr = music[indx].url;
+				var sr_img = music[indx].img;
+				var sr_name = music[indx].name;
+				var sr_img_1 = music[indx].img;
+				var sr_name_1 = music[indx].name;
+				oVideo1.src=sr;
+				oVideo1_img.src = sr_img;
+				oVideo1_name.innerHTML = sr_name;
+				oVideo1_img_1.src = sr_img;
+				oVideo1_name_1.innerHTML = sr_name;
+				oVideo1.play();
+				document.getElementById("pc_work_left_music_pase").style.opacity = 1;
+				document.getElementById("pc_work_left_music_play").style.opacity = 0;
+			}
+			
+			
+			// 暂时关闭加载页面 默认2500
+			var t = setTimeout(goon,1);
+			function goon(){
+				var pase = document.getElementById("pc_work_left_music_pase");
+				var play = document.getElementById("pc_work_left_music_play");
+				document.getElementById("load").style.display="none";
+				setInterval(function() {
+					var width = window.screen.width;
+					if (width < 800){
+						document.getElementById("pc_box").style.display= "none";
+						document.getElementById("mobile_box").style.display = "";
+						document.getElementById("music1").pause();
+						pase.style.opacity = 0;
+						play.style.opacity = 1;
+					}else {
+						document.getElementById("pc_box").style.display= "";
+						document.getElementById("mobile_box").style.display = "none";
+					}
+				},100)
+			}
+			
+			// nav
+			var ls = setTimeout(covernav,1);
+			function covernav() {
+				// document.getElementById("pc_goto_top").style.display = "none";
+				document.getElementById("pc_nav").style.display = "none";
+			}
+			window.onscroll = function() {
+				// 获取滚动条向下拉上方遮盖多少像素
+				var navtop = document.documentElement.scrollTop || document.body.scrollTop;
+				if (navtop >= 100){
+					document.getElementById("pc_nav").style.display = "";
+				}else {
+					document.getElementById("pc_nav").style.display = "none";
+				}
+				if (navtop >= 600){
+					// document.getElementById("pc_goto_top").style.display = "";
+					document.getElementById("pc_left_bottom_time").style.opacity = 1;
+				}else{
+					// document.getElementById("pc_goto_top").style.display = "none";
+					document.getElementById("pc_left_bottom_time").style.opacity = 0;
+				}
+			}
+			
+			function pc_goto_top(){
+				document.documentElement.scrollTop = "0";
+				document.body.scrollTop = "0";
+				document.getElementById("pc_goto_top_tip").style.display= "";
+				setTimeout(pc_goto_top_tip_on,1);
+			}
+			
+			function pc_goto_top_tip_on() {
+				var width = window.screen.width;
+				document.getElementById("pc_goto_top_tip").style.right = width/2 - 200 + "px";
+				setTimeout(pc_goto_top_tip_off,2000);
+			}
+			
+			function pc_goto_top_tip_off() {
+				document.getElementById("pc_goto_top_tip").style.display= "none";
+			}
+			
+			function pc_nav_li_2(){
+				document.getElementById("pc_nav_yqlj").style.display= "";
+				document.getElementById("pc_nav_yqlj").style.opacity= "1";
+				onmousemove = function dd(){
+					var event = event || window.event;
+					// client相对于元素视口的坐标
+					// screen相对于屏幕的坐标（非固定）
+					var x = event.clientX;
+					if(x < 334 || x > 446){
+						document.getElementById("pc_nav_yqlj").style.display= "none";
+						document.getElementById("pc_nav_yqlj").style.opacity= "0";
+					}
+				}
+			}
+			function pc_nav_yqlj_off(){
+				document.getElementById("pc_nav_yqlj").style.display= "none";
+				document.getElementById("pc_nav_yqlj").style.opacity= "0";
+			}
+
+			
+			function pc_nav_li_3(){
+				document.getElementById("pc_nav_kfrz").style.display= "";
+				document.getElementById("pc_nav_kfrz").style.opacity= "1";
+				onmousemove = function dd(){
+					var event = event || window.event;
+					var x = event.clientX;
+					if(x < 461 || x > 550){
+						document.getElementById("pc_nav_kfrz").style.display= "none";
+						document.getElementById("pc_nav_kfrz").style.opacity= "0";
+					}
+				}
+			}
+			function pc_nav_kfrz_off(){
+				document.getElementById("pc_nav_kfrz").style.display= "none";
+				document.getElementById("pc_nav_kfrz").style.opacity= "0";
+			}
+			
+			
+			function pc_back_bug() {
+				document.documentElement.scrollTop = "0";
+				document.body.scrollTop = "0";
+				document.getElementById("pc_back_bug_mask").style.display = "";
+			}
+			
+			function pc_back_bug_off(){
+				document.getElementById("pc_back_bug_mask").style.display = "none";
+			}
+			
+			var t = null;
+			t = setTimeout(time,1000);//开始执行
+			function time(){
+					var today=new Date();//定义日期对象      
+					var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+					var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+					var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+					// 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+					var kk =(hh * 60) * 60 + mm * 60 + ss;
+					mm=checkTime(mm);   
+					ss=checkTime(ss);
+					document.getElementById("pc_left_bottom_time_n").innerHTML=" " + hh + ":" + mm+ ":" +ss;
+					document.getElementById("mobile_left_bottom_time_n").innerHTML=" " + hh + ":" + mm+ ":" +ss;
+					document.getElementById("mobile_time_affter_n").value = kk;
+					t = setTimeout(time,1000);//设定定时器，循环执行
+			}
+			
+			function checkTime(i)
+			{   
+				if (i<10){
+					i="0" + i;
+				}   
+					return i;
+			}
+			
+			
+			
+			// 移动端
+			
+			function mobile_mask_on(){
+				var nav = document.getElementById("mobile_nav");
+				document.getElementById("mobile_mask").style.display = "";
+				
+				timeId_1 = setInterval(function () {
+				if (nav.offsetLeft >= 0) {
+					clearInterval(timeId_1);
+					nav.style.left = 0 + 'px';
+				} else {
+					nav.style.left = nav.offsetLeft + 10 + 'px';
+				}
+				}, 10);
+
+				// 禁止滚动
+				document.body.style.overflow='hidden';
+				document.addEventListener("touchmove",mo,{passive:false});
+				
+			}
+			function mobile_mask_off(){
+				document.getElementById("mobile_mask").style.display = "none";
+				var nav = document.getElementById("mobile_nav");
+				nav.style.left = "-280px";
+				// 允许滚动
+				document.body.style.overflow='';
+				document.removeEventListener("touchmove",mo,{passive:false});
+			}
+		</script>
+	</head>
+	<body id="body" >
+		<audio id="music1">
+			当前浏览器不支持audio
+		</audio>
+		<!-- 加载页面 -->
+		<div id="load" style="width: 300px; margin: 150px auto;">
+			<img id="gif" src="../images/loading.gif" style="width: 350px;height: 250px;">
+		</div>
+		
+		<!-- 电脑端 -->
+		<div id="pc_box">
+			<div id="pc_head_title">
+				<div id="pc_nav">
+					<img src="../images/1.ico" style="position: absolute;left: 25px;top: 9px;user-select: none;" >
+					<span class="pc_head_name">暖阳THU</span>
+					<ul>
+						<li id="pc_nav_li_1" style="position: absolute;left: 280px;"><a href="../index.html" style="text-decoration: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">首页</span></a></li>
+						<li id="pc_nav_li_2" onmouseover="pc_nav_li_2()" style="position: absolute;left: 355px;"><a style="text-decoration: none;user-select: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">友情链接</span></a></li>
+						<li id="pc_nav_li_3" onmouseover="pc_nav_li_3()" style="position: absolute;left: 460px;"><a style="text-decoration: none;user-select: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">开发日志</span></a></li>
+						<li id="pc_nav_li_4" style="position: absolute;left: 575px;"><a style="text-decoration: none;user-select: none;"><span style="line-height: 40px;font-size: 18px;font-weight: 500;color: #000000;">文档系统</span></a></li>
+					</ul>
+					<div id="pc_nav_yqlj" onmouseleave="pc_nav_yqlj_off()" style="transition: all .5s; background-color: white; width: 135px;height: 250px;position: absolute;top:65px;left: 320px;border-radius: 5px; box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);">
+						<ul style="user-select: none;">
+							<li title="首页" style="width: 32px;position: absolute;top: 40px;left: 50px;"><a href="../index.html"><img class="li_img" src="../images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="bilibili" style="width: 32px;position: absolute;top: 102px; left: 50px;"><a href="https://space.bilibili.com/182358060" target="_blank"><img class="li_img" src="../images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+							<li title="GitHub" style="width: 32px;position: absolute;top: 174px; left: 50px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="../images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						</ul>
+					</div>
+					<div id="pc_nav_kfrz" onmouseleave="pc_nav_kfrz_off()" style="transition: all .5s; background-color: white; width: 135px;height: 250px;position: absolute;top:65px;left: 435px;border-radius: 5px; box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%); overflow: hidden;">
+							<div style="position: absolute; top: 30px;">
+								<img src="../images/red.jpg" width="100px" style="transform: scale(1.5); position: absolute; left: 20px;">
+							</div>
+							<div>
+								<span style="color: #919191; margin-left: 10px; height: 40px;line-height: 25px;font-size: 15px; position: absolute; top: 110px;">&nbsp;&nbsp;目前系统还在开发中,并不是稳定版本,还希望大家积极反馈bug</span>
+							</div>
+					</div>
+					<div style="position: absolute;top: 0; left: 900px; width: 600px; height: 80px;">
+						<div style="margin-left: 10px;margin-top: 7px; width: 64px;height: 64px;overflow: hidden;border-radius: 32px;box-shadow: 0 0 5px -2px;display: inline-block;">
+							<img onclick="pc_music_paused()" id="pc_work_left_music_img" style="width: 64px;height: 64px;" src="../images/1.ico">
+						</div>
+						<div style="width: 100%;position: absolute;top: 0; left: 90px;">
+							<h2 id="pc_work_left_music_name" style="font-size: 15px;font-weight: 600;">暂时没有音乐正在播放</h2>
+						</div>
+						<progress id="pc_nav_progress" max="" value="" style="width: 300px; position: absolute;top: 50px;left: 90px;height: 8px;" />
+					</div>
+				</div>
+			</div>
+			<div id="pc_nav_bak">
+				<span class="pc_head_name">暖阳THU</span>
+			</div>
+			<div id="pc_work">
+				<!-- 工作区域 -->
+				<!-- 左边 -->
+				<div id="new_work_left" style="width: 25%;height: 910px;position: absolute;top: 70px;left: -25%;">
+					<div id="pc_workd_left_mytip" style="width: 80%;height: 345px;margin: 10px auto;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #c4c4c4;">
+						<div class="pc_workd_left_mytip_img" style="box-shadow: ;">
+							<img src="../images/pc_work_left_mytip_img.png" width="100%" height="90px">
+						</div>
+						<div style="border-radius: 32px; overflow: hidden;width: 48px;height: 48px;position: absolute;top: 80px;left: 70px;border: rgba(0, 0, 0, 0.1) 2px solid; box-shadow: 0 0 3px;">
+							<img src="../images/1.ico" width="48px" height="48px">
+						</div>
+						<div style="width: 155px; height: 200px; position: absolute;top: 100px;border-radius: 5px;">
+							<span style="position: absolute; top: 35px;left: 30px;font-size: 15px;font-weight: 600;">_暖暖的太阳_</span>
+							<span style="position: absolute; top: 75px;left: 45px;font-size: 15px;font-weight: 600;color: #87CEEB;">1</span>
+							<span style="position: absolute; top: 105px;left: 35px;font-size: 15px;font-weight: 600;color: #e67474;">文章</span>
+							<span style="position: absolute; top: 75px;left: 95px;font-size: 15px;font-weight: 600;color: #87CEEB;">1</span>
+							<span style="position: absolute; top: 105px;left: 85px;font-size: 15px;font-weight: 600;color: #e67474;">日记</span>
+							<a href="https://space.bilibili.com/182358060" target="_blank"><span style="position: absolute; top: 145px;left: 25px;font-size: 15px;font-weight: 600;color: white;width: 100px;height: 40px;background-color: #87CEEB;text-align: center;line-height: 40px;border-radius: 5px;">关注</span></a>
+							<a href="https://message.bilibili.com/#/whisper/mid182358060" target="_blank"><span style="position: absolute; top: 200px;left: 25px;font-size: 15px;font-weight: 600;color: white;width: 100px;height: 40px;background-color: #ffcfd0;text-align: center;line-height: 40px;border-radius: 5px;">私信</span></a>
+						</div>
+					</div>
+					<div id="pc_work_left_music" style="width: 80%;height: 345px;margin: 10px auto;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #c4c4c4;">
+						<span style="color: #000000; margin: 15px; height: 40px;line-height: 40px;font-weight: 800;">音乐盒子</span>
+						<div style="margin: 30px auto; width: 64px;height: 64px;overflow: hidden;border-radius: 32px;box-shadow: 0 0 5px -2px;">
+							<img onclick="pc_music_paused()" id="pc_work_left_music_img_1" style="width: 64px;height: 64px;">
+						</div>
+						<div style="width: 100%;">
+							<h2 id="pc_work_left_music_name_1" style="font-size: 15px;text-align: center;line-height: 20px;font-weight: 400;"></h2>
+						</div>
+						
+						<div id="pc_work_left_music_buttom" style="position: relative;">
+							<span onclick="pc_music_last()" style="line-height: 40px; text-align: center;width: 100px;height: 40px;background-image: linear-gradient(90deg,#ffcfd0,#87CEEB,#20f1ea); position: absolute;top: 0px;left: 25px;border-radius: 5px;color: white;font-size: 15px;font-weight: 600;">上一首</span>
+							<span id="pc_work_left_music_pase" onclick="pc_music_paused()" style=" transition: all .5s; line-height: 40px; text-align: center;width: 100px;height: 40px;background-color: #f99d9f;position: absolute;top: 50px;left: 25px;border-radius: 5px;color: white;font-size: 15px;font-weight: 600;">暂停</span>
+							<span id="pc_work_left_music_play" onclick="pc_music_paused()" style="opacity: 0; transition: all .5s; line-height: 40px; text-align: center;width: 100px;height: 40px;background-color: #a1f9e3;position: absolute;top: 50px;left: 25px;border-radius: 5px;color: white;font-size: 15px;font-weight: 600;">播放</span>
+							<span onclick="pc_music_next()" style="line-height: 40px; text-align: center;width: 100px;height: 40px;background-image: linear-gradient(90deg,#20f1ea,#87CEEB,#ffcfd0); position: absolute;top: 100px;left: 25px;border-radius: 5px;color: white;font-size: 15px;font-weight: 600;">下一首</span>
+						</div>
+					</div>
+					<div id="pc_work_left_music_menu" style="width: 80%;height: 345px;margin: 10px auto;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #c4c4c4;">
+						<span style="color: #000000; margin: 15px; height: 40px;line-height: 40px;font-weight: 800;">曲目</span>
+						<span style="margin-left: -13px; font-size: 7px;color: #a6a6a6;">点击更改音乐哦</span>
+						<div class="pc_work_left_music_menu">
+							<h5 onclick="music_change(0)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">1</span>致你 - yihuik苡慧</h5>
+							<h5  onclick="music_change(1)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">2</span>落在生命里的光 - 尹..</h5>
+							<h5 onclick="music_change(2)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">3</span>这就是爱吗 - 杨胖雨</h5>
+							<h5 onclick="music_change(3)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">4</span>在你的身边 - 盛哲</h5>
+							<h5 onclick="music_change(4)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">5</span>失眠飞行 - 接个吻，..</h5>
+							<h5 onclick="music_change(5)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">6</span>负重一万斤长大 - 太一</h5>
+							<h5 onclick="music_change(6)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">7</span>八小时时差 - DJ</h5>
+							<h5 onclick="music_change(7)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">8</span>刚刚好 - 薛之谦</h5>
+							<h5 onclick="music_change(8)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">9</span>他不懂 - 张杰</h5>
+							<h5 onclick="music_change(9)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">10</span>与火星的孩子对话 -..</h5>
+							<h5 onclick="music_change(10)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">11</span>把回忆拼好给你 - 王..</h5>
+							<h5 onclick="music_change(11)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">12</span>无人 - 匿名</h5>
+							<h5 onclick="music_change(12)"><span style="font-size: 10px;color: #919191;margin-right: 3px;margin-left: 0;">13</span>哪里都是你 - 队长</h5>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+				<!-- 中间 -->
+				<div id="new_work" style="width: 100%;height: auto;position: absolute;top: 90px; box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);">
+					<div style="height: auto;position: relative;">
+						<!-- 标题 -->
+						<!-- <div style="width: 100%;height: 30px;">
+							<h3 style="line-height: 30px;position: absolute;left: 15px;">网站开发过程</h3>
+						</div> -->
+						<div style="width: 100%;height: auto;padding-bottom: 200px;">
+							<div style="margin: 0 auto;width: 100px;">
+								<p style="color: #cacaca;font-size: 15px;font-weight: 500;">「 单击下载 」</p>
+							</div>
+							<a href="../Download/暖阳 Studyspace开发过程.md" download="暖阳 Studyspace开发过程.md" style="position: relative;"><div id="study space" style="margin: 8px auto;width: 400px;height: 200px; border-radius: 5px;overflow: hidden;">
+								<p style="position: absolute; z-index: 10;color: white;font-weight: 600;font-size: 25px;margin-left: 15px;">暖阳 Studyspace开发自述</p>
+								<img src="https://w.wallhaven.cc/full/dp/wallhaven-dpzpko.png" style="width: 400px;height: 250px;position: relative;top: -30px">
+							</div></a>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				<!-- 右边 -->
+				<div id="new_work_right" style="width: 25%;height: 910px;position: absolute;top: 70px;left: 100%;">
+					<div id="pc_workd_right_mytip" style="width: 80%;height: 180px;margin: 10px auto;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #333333;">
+						<span style="color: #000000; margin: 15px; height: 40px;line-height: 40px;">公告栏</span>
+						<br />
+						<div style="margin: 0 auto; width: 80%;">
+							<span style="color: #919191; margin-left: 20px; height: 40px;line-height: 25px;font-size: 15px;">目前系统还在开发中,并不是稳定版本,还希望大家积极反馈bug</span>
+						</div>
+					</div>
+					<div id="pc_workd_right_mytip" style="width: 80%;height: 180px;border-radius: 5px;overflow: hidden;user-select: none;box-shadow: 0 0 1px #333333; position: absolute; top: 200px;left: 20px;">
+						<span style="color: #000000; margin: 15px; height: 40px;line-height: 40px;">更多功能</span>
+						<br />
+						<div style="margin: 0 auto; width: 80%;">
+							<a onclick="pc_back_bug()" target="_blank"><span style="position: absolute; top: 45px;left: 25px;font-size: 15px;font-weight: 600;color: white;width: 100px;height: 40px;background-color: #F56C6C;text-align: center;line-height: 40px;border-radius: 5px;">反馈bug</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div id="pc_goto_top" style="background: whitesmoke; width: 40px;height: 40px;position: fixed;right: 40px;bottom: 50px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
+				<span style="user-select: none;" onclick="pc_goto_top()">回到顶部</span>
+			</div> -->
+			<div id="pc_goto_top_tip" style="background: #fde2e2; width: 400px;height: 40px;position: fixed;top: 10px;padding-left: 7px;padding-top: 7px;padding-bottom: 7px; border-radius: 5px;">
+				<div style="width: 32px;height: 32px;display: inline-block;padding-top: 3px;padding-left: 3px; padding-right: 100px;float: left;">
+					<img src="../images/1.ico" style="width: 32px;height: 32px;">
+				</div>
+				<span id="pc_goto_top_tip_title" style="user-select: none;text-align: center;color: #F56C6C;font-size: 14px;font-weight: 600;line-height: 40px;">已回到顶部</span>
+			</div>
+			
+			<div id="pc_left_bottom_time" style="width: 200px;height: 50px;position: fixed;left: 20px; bottom: 0px;border-radius: 5px;opacity: 0;transition: all .5s;">
+				<h3 id="pc_left_bottom_time_n" style="text-align: center; margin-top: 5px; font-size: 30px;"></h3>
+			</div>
+			
+			<div onclick="pc_back_bug_off()" id="pc_back_bug_mask" style="background-color: rgba(250,250,250,.3); width: 100%;height: 100%; z-index: 9;position: absolute;top: 0;left:0;">
+				<div id="pc_back_bug_div" style="width: 300px;height: 450px; background-color: white; margin: 100px auto; position: relative;border-radius: 5px;">
+					<!-- bug -->
+					<div style="width: 70%;position: absolute;top: 50px;left: 30px;">
+						<span style="text-align: center;color: black;font-size: 15px; font-weight: 600;">你可以尝试以下几种方式联系</span>
+					</div>
+					<ul style="user-select: none;">
+						<li title="邮箱" style="width: 25px;position: absolute;top: 110px;"><a href="mailto:1182450661@qq.com?subject=bug反馈&body=关于网站的bug"><img class="li_img" src="../images/1.ico" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						<li title="私信" style="width: 25px;position: absolute;top: 110px; left: 130px;"><a href="https://message.bilibili.com/#/whisper/mid182358060" target="_blank"><img class="li_img" src="../images/bilibili.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+						<li title="GitHub" style="width: 25px;position: absolute;top: 110px; left: 220px;"><a href="https://github.com/SunLine-THU" target="_blank"><img class="li_img" src="../images/github.png" style="width: 32px;height: 32px;transition: all .3s;"></a></li>
+					</ul>
+					<div style="width: 70%;position: absolute;top: 190px;left: 30px;">
+						<span style="text-align: center;color: black;font-size: 15px; font-weight: 600;">如果以上方法无回应</span>
+					</div>
+					<span style="text-align: center;position: absolute;top: 460px;left: 80px; color: #c8c8c8;font-size: 13px;">「 点击空白处关闭窗口 」</span>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		<!-- 手机端 -->
+		<div id="mobile_box">
+			<div style="width: 100%;height: 50px;">
+				<i onclick="mobile_mask_on()" class="fas fa-align-left" style="color: black;font-size: 20px;position: absolute;top: 20px;left: 20px;"></i>
+			</div>
+			
+			<!-- 工作区域 -->
+			<div id="mobile_work" style="width: 100%;height: auto; position: relative;">
+				<div style="width: 100%;height: auto;">
+					<!-- 引入html -->
+					<div style="margin: 0 auto;width: 100px;">
+						<p style="color: #cacaca;font-size: 13px;font-weight: 600;">「 单击下载 」</p>
+					</div>
+					<div id="mobile_Download" style="height: 900px;">
+						<a href="../Download/暖阳 Studyspace开发过程.md" download="暖阳 Studyspace开发过程.md" style="position: relative;"><div id="study space" style="margin: 8px auto;width: 300px;height: 200px; border-radius: 5px;overflow: hidden;">
+							<p style="position: absolute; z-index: 10;color: #ffffff;font-weight: 600;font-size: 25px;margin-left: 15px;">暖阳 Studyspace开发自述</p>
+							<img src="https://w.wallhaven.cc/full/dp/wallhaven-dpzpko.png" style="width: 400px;height: 250px;position: relative;top: -30px;left: -30px;">
+						</div></a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="mobile_mask" style="background-color: rgba(0,0,0,.3); width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 10;display: none;">
+				<!-- 导航栏 -->
+				<div id="mobile_nav" style="height: 1000px;width: 280px;left: -280px; background-color: white; position: relative;">
+					<div style="width: 100%;height: 110px;">
+						<img src="../images/1.ico" style="width: 64px;height: 64px;position: absolute;top: 30px; left: 15px;" >
+						<span class="mobile_head_name">暖阳THU</span>
+						<span style="position: absolute;left: 105px;top: 65px;font-size: 15px;font-weight: 500;">惜时 共勉</span>
+					</div>
+					<div style="width: 100%;height: 100px;position: relative;">
+						<h3 id="mobile_left_bottom_time_n" style="font-size: 20px;color: #000000; position: absolute;left: 10px;"></h3>
+						<progress id="mobile_time_affter_n" max = "86400" style="width: 150px;height: 8px; position: absolute;top: 70px;left: 10px;"></progress>
+					</div>
+					<div style="width: 100%;height: 500px;position: relative;">
+						<ul>
+							<a href="../index.html"><li style="font-size: 18px;font-weight: 800;position: absolute;top: -10px;left: 15px; color: #000000;">首页</li></a>
+							<div style=" height: 100px;position: absolute;top: 40px;left: 15px; width: 180px;">
+								<details style="font-size: 18px;font-weight: 800;color: #000000;">
+									<summary>友情链接</summary>
+									<ul>
+										<li title="bilibili" style="width: 110px; position: absolute;top: 35px;left: 30px;"><a href="https://space.bilibili.com/182358060" target="_blank" style="color: #a4a4a4;text-decoration: none;font-size: 15px;font-weight: 600;">哔哩哔哩</a></li>
+										<li title="GitHub" style="position: absolute;top: 65px;left: 30px;"><a href="https://github.com/SunLine-THU" target="_blank" style="color: #a4a4a4;text-decoration: none;font-size: 15px;font-weight: 600;">GitHub</a></li>
+									</ul>
+								</details>
+							</div>
+							<a href="#"><li style="font-size: 18px;font-weight: 800;position: absolute;top: 150px;left: 15px; color: #000000;">文档系统</li></a>
+						</ul>
+					</div>
+				</div>
+				<div onclick="mobile_mask_off()" style="position: absolute;top: 0; left: 280px; width: 100%;height: 100%;"></div>
+			</div>
+		</div>
+	</body>
+</html>
