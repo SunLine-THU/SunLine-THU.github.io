@@ -21,4 +21,5 @@ img {
 	width: 1550px;
 	height: 160px;
 	float: left;
+	transition: all 0.5s;
 }
