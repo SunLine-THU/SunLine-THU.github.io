@@ -1,5 +1,5 @@
 window.onload = function (){
-	console.log("%c路有多远，\n只有心知道，\n最美的旅程，\n是不断的经历，\n坚持走下去．\n我是开发者暖阳THU,\n与您同行！", "line-height:22px;color:#00a5f2");
+	console.log("%c路有多远，\n只有心知道，\n最美的旅程，\n是不断的经历，\n坚持走下去．\n我是开发者暖阳,\n与您同行！", "line-height:22px;color:#00a5f2");
 	console.log("%c这是我的第二个网站的Demo版本，当前仅用来做live2d的测试", "line-height:22px;color:#FFA500");
 	var width = window.screen.width;
 	// var change_time = setInterval(function (){
