@@ -7,7 +7,7 @@ window.onload = function (){
 	// },800)
 	// window.clearInterval(change_time)
 	change(width)
-	
+	// js注入的地方，注入一个html
 	var div = document.createElement('div');
 	div.setAttribute('style','position: fixed; bottom: 0px; right: 0px;')
 	div.innerHTML = '<iframe id="idFrame" name="idFrame" src="./live2d/live2d.html" height = "300px" width = "300px" frameborder="0" scrolling="no"></iframe>'
